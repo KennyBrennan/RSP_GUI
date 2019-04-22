@@ -1,6 +1,3 @@
-
-import javax.swing.SwingUtilities;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -58,8 +55,8 @@ public class NewJFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel10.setText("MESA Interface");
+        jLabel10.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        jLabel10.setText("RSP Interface");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -263,10 +260,8 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        SwingUtilities.invokeLater(() -> {
-            Graph ex = new Graph();
-            ex.setVisible(true);
-        });
+            GraphingGui g = new GraphingGui();
+            g.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     public static void main(String args[]) {

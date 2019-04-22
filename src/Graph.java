@@ -19,16 +19,12 @@ import org.jfree.data.xy.XYSeriesCollection;
 public class Graph extends JFrame {
     private LinkedList<Double> x = new LinkedList();
     private LinkedList<Double> y= new LinkedList();
-    private String title = "Average Income ";
-    private String xAxis = "Age";
-    private String yAxis = "Salary"; 
+    public String title ;
+    public String xAxis;
+    public String yAxis ; 
     
-    
-    public Graph() {
-        initUI();
-    }
 
-    private void initUI() {
+    public void initUI() {
         XYDataset dataset = createDataset("DATA");
         JFreeChart chart = createChart(dataset);
         ChartPanel chartPanel = new ChartPanel(chart);
@@ -38,7 +34,7 @@ public class Graph extends JFrame {
         pack();
         setTitle("Line chart");
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       // setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public void SetX(LinkedList x){
