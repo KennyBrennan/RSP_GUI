@@ -22,17 +22,17 @@ public class Graph extends JFrame {
     public String title ;
     public String xAxis;
     public String yAxis ; 
-    
+    public String legend;
 
     public void initUI() {
-        XYDataset dataset = createDataset("DATA");
+        XYDataset dataset = createDataset(legend);
         JFreeChart chart = createChart(dataset);
         ChartPanel chartPanel = new ChartPanel(chart);
         chartPanel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
         chartPanel.setBackground(Color.white);
         add(chartPanel);
         pack();
-        setTitle("Line chart");
+        setTitle(title);
         setLocationRelativeTo(null);
        // setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
@@ -51,6 +51,9 @@ public class Graph extends JFrame {
     }
     public void SetYAxis(String yAxis){
         this.yAxis = yAxis;
+    }
+    public void SetLegend(String legend){
+        this.legend = legend;
     }
     
     private XYDataset createDataset(String dataName) {
