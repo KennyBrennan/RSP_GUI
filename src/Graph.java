@@ -19,6 +19,8 @@ import org.jfree.data.xy.XYSeriesCollection;
 public class Graph extends JFrame {
     private LinkedList<Double> x = new LinkedList();
     private LinkedList<Double> y= new LinkedList();
+    public FileHandler fileHandler;
+    public LinkedList<dataObject> historyData = new LinkedList();
     public String title ;
     public String xAxis;
     public String yAxis ; 
@@ -35,6 +37,32 @@ public class Graph extends JFrame {
         setTitle(title);
         setLocationRelativeTo(null);
        // setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+    
+    public void SetXData(){
+        switch(xAxis.toLowerCase()){
+            case "model number":
+                for(dataObject o: historyData){
+                    x.add(Double.valueOf(o.modelNumber));
+                } 
+                break;
+            case "star age":
+                for(dataObject o: historyData){
+                    Double.valueOf(o.starAge);
+                } 
+                break;
+            case "star age day":
+                for(dataObject o: historyData){
+                    Double.valueOf(o.starAge);
+                } 
+                break;
+            case "rsp phase":
+                for(dataObject o: historyData){
+                    Double.valueOf(o.starAge);
+                } 
+                break;
+                
+        }
     }
 
     public void SetX(LinkedList x){

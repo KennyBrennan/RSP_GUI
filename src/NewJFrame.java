@@ -286,8 +286,8 @@ try {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         fileHandler.UpdateFile(Mass_Text.getText(), Temp_Text.getText(), Lumosity_Text.getText(), X_Text.getText(), Z_Text.getText());
+        fileHandler.UpdatePeriods(Period_Text.getText());
         commandHandler.start();
-
         System.exit(0);//Exit system
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -312,7 +312,6 @@ try {
                // fc.showSaveDialog(null);
                   //fc.setAcceptAllFileFilterUsed(false);
 		if (fc.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
-                   
                      directory = fc.getSelectedFile();
                      commandHandler = new CommandHandler();
                      commandHandler.setPath(directory);

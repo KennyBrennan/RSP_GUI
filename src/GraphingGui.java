@@ -1,4 +1,5 @@
 
+import java.util.LinkedList;
 import javax.swing.SwingUtilities;
 
 /*
@@ -143,9 +144,11 @@ public class GraphingGui extends javax.swing.JFrame {
         xAxis = jTextField2.getText();
         yAxis = jTextField3.getText();
         legend = jTextField4.getText();
-        fileHandler.ParseHistory();
+        
+    LinkedList data = fileHandler.ParseHistory();
         SwingUtilities.invokeLater(() -> {
             Graph g = new Graph();
+            g.fileHandler = this.fileHandler;
             g.SetTitle(title);
             g.SetXAxis(xAxis);
             g.SetYAxis(yAxis);
