@@ -16,6 +16,7 @@ public class GraphingGui extends javax.swing.JFrame {
     public String xAxis;
     public String yAxis;
     public String legend;
+    public FileHandler fileHandler;
     
     /**
      * Creates new form GraphingGui
@@ -142,6 +143,7 @@ public class GraphingGui extends javax.swing.JFrame {
         xAxis = jTextField2.getText();
         yAxis = jTextField3.getText();
         legend = jTextField4.getText();
+        fileHandler.ParseHistory();
         SwingUtilities.invokeLater(() -> {
             Graph g = new Graph();
             g.SetTitle(title);

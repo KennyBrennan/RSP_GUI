@@ -294,6 +294,7 @@ try {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
             GraphingGui g = new GraphingGui();
+            g.fileHandler = this.fileHandler;
             g.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 

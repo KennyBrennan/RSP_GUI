@@ -100,5 +100,24 @@ public class FileHandler {
     }
             
             
+    public void ParseHistory(){
+        File history;
+        Scanner in;
+        LinkedList data = new LinkedList();
+        try {
+            history = new File("history.data"); //todo: Update to real file path
+            in = new Scanner(history);
+            while(in.hasNext()){
+                data.add(in.next());
+            }
+            for(Object i : data){
+                System.out.println("Data: "+ i);
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(FileHandler.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+    }
 
 }
