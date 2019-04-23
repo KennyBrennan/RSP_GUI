@@ -7,16 +7,20 @@ public class CommandHandler {
 
     private String starName;
     private Process p;
+    String[] commands;
+    String[] envp;
+    File f;
     
-    public CommandHandler(String starName) {
-        this.starName = starName;
+    public CommandHandler() {
+      
         
-        String[] commands = new String[1];
-        String[] envp = new String[1];
+        commands = new String[1];
+        envp = new String[1];
         envp[0] = "";
         commands[0] = "ls";
-        File f = new File(System.getProperty("user.home")+"/mesa/star/test_suite/"+this.starName);
-        try {
+    }
+    public void start () {
+         try {
             p = Runtime.getRuntime().exec(commands,envp,f);
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(p.getInputStream()));
@@ -33,7 +37,14 @@ public class CommandHandler {
             System.out.println("exit: " + p.exitValue());
             p.destroy();
         } catch (IOException | InterruptedException e) {System.out.println(e);}
-    
     }
+     public void setPath(File path) {
+          f = path;
+    }
+     public void setStarName(String starName) {
+        this.starName = starName;
+    }
+
+
     
 }

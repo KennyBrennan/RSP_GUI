@@ -3,6 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+import javax.swing.JFileChooser;
+import java.io.File;
 
 /**
  *
@@ -27,7 +29,6 @@ public class NewJFrame extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel10 = new javax.swing.JLabel();
@@ -51,18 +52,12 @@ public class NewJFrame extends javax.swing.JFrame {
         jTextField7 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
+        jToggleButton1 = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.GridBagLayout());
 
         jLabel10.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         jLabel10.setText("RSP Interface");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.ipady = 9;
-        gridBagConstraints.insets = new java.awt.Insets(17, 0, 17, 0);
-        getContentPane().add(jLabel10, gridBagConstraints);
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("Cepheid");
@@ -224,13 +219,38 @@ public class NewJFrame extends javax.swing.JFrame {
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 29;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 7, 0);
-        getContentPane().add(jPanel1, gridBagConstraints);
+        jToggleButton1.setText("Set Directory Path");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jLabel10)
+                .addGap(276, 276, 276))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jToggleButton1)))
+                .addGap(29, 29, 29))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19)
+                .addComponent(jToggleButton1)
+                .addGap(36, 36, 36)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -238,13 +258,28 @@ public class NewJFrame extends javax.swing.JFrame {
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
         fileHandler.ChangeFile("inlist_rsp_Cepheid");
+        
         model = "rsp_Cepheid";
+        try {
+        commandHandler.setStarName(model);
+        } catch (Exception e){
+            System.out.println("Select the file path first");
+        }
+                  
+
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // TODO add your handling code here:
         fileHandler.ChangeFile("inlist_rsp_RR_Lyrae");
         model = "rsp_RR_Lyrae";
+try {
+        commandHandler.setStarName(model);
+        } catch (Exception e){
+            System.out.println("Select the file path first");
+        }
+                  
+
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void Mass_TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mass_TextActionPerformed
@@ -254,7 +289,8 @@ public class NewJFrame extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         fileHandler.UpdateFile(Mass_Text.getText(), Temp_Text.getText(), Lumosity_Text.getText(), X_Text.getText(), Z_Text.getText());
-        commandHandler = new CommandHandler(model);
+        commandHandler.start();
+
         System.exit(0);//Exit system
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -263,6 +299,32 @@ public class NewJFrame extends javax.swing.JFrame {
             GraphingGui g = new GraphingGui();
             g.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        // TODO add your handling code here:
+        JFileChooser fc = new JFileChooser();
+              String choosertitle = ("Set Path");
+		
+		//String filename = (fc.getSelectedFile().getName());
+                File directory;
+                fc.setCurrentDirectory(new File(System.getProperty("user.home")));
+                fc.setDialogTitle(choosertitle);
+                fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+                //System.out.println(fc.getSelectedFile());
+               // fc.showSaveDialog(null);
+                  //fc.setAcceptAllFileFilterUsed(false);
+		if (fc.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
+                   
+                     directory = fc.getSelectedFile();
+                     commandHandler = new CommandHandler();
+                     commandHandler.setPath(directory);
+                     System.out.println(directory);
+                     
+                    }
+                else {
+                    System.out.println("No Selection ");
+                }
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -321,5 +383,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JTextField jTextField7;
+    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }
