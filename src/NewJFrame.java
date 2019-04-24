@@ -11,8 +11,8 @@ import java.io.File;
  * @author Kenny
  */
 public class NewJFrame extends javax.swing.JFrame {
-    public FileHandler fileHandler = new FileHandler("inlist_RSP_Cephied");
-    public CommandHandler commandHandler;
+    public FileHandler fileHandler = new FileHandler();
+    public CommandHandler commandHandler = new CommandHandler();
     public String model;
     /**
      * Creates new form NewJFrame
@@ -254,11 +254,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
-        fileHandler.ChangeFile("inlist_rsp_Cepheid");
-        
+        fileHandler.ChangeFile("rsp_Cepheid/inlist_rsp_Cepheid");
+        commandHandler.changeFolder("rsp_Cepheid");
         model = "rsp_Cepheid";
         try {
-        commandHandler.setStarName(model);
+            commandHandler.setStarName(model);
         } catch (Exception e){
             System.out.println("Select the file path first");
         }
@@ -268,10 +268,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // TODO add your handling code here:
-        fileHandler.ChangeFile("inlist_rsp_RR_Lyrae");
+        fileHandler.ChangeFile("rsp_RR_Lyrae/inlist_rsp_RR_Lyrae");
+        commandHandler.changeFolder("rsp_RR_Lyrae");
         model = "rsp_RR_Lyrae";
-try {
-        commandHandler.setStarName(model);
+        try {
+            commandHandler.setStarName(model);
         } catch (Exception e){
             System.out.println("Select the file path first");
         }
@@ -301,22 +302,27 @@ try {
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
         JFileChooser fc = new JFileChooser();
-              String choosertitle = ("Set Path");
+              String chooserTitle = ("Set Path");
 		
 		//String filename = (fc.getSelectedFile().getName());
                 File directory;
+                String directoryString;
                 fc.setCurrentDirectory(new File(System.getProperty("user.home")));
-                fc.setDialogTitle(choosertitle);
+                fc.setDialogTitle(chooserTitle);
                 fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
                 //System.out.println(fc.getSelectedFile());
                // fc.showSaveDialog(null);
                   //fc.setAcceptAllFileFilterUsed(false);
 		if (fc.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
                      directory = fc.getSelectedFile();
-                     commandHandler = new CommandHandler();
-                     commandHandler.setPath(directory);
-                     System.out.println(directory);
-                     
+                  //   commandHandler = new CommandHandler();
+                   //  commandHandler.setPath(directory);
+                   //  System.out.println(directory);
+
+                     directoryString = directory.toString();
+                     fileHandler.setPath(directoryString);
+                     commandHandler.setPath(directory, directoryString);
+
                     }
                 else {
                     System.out.println("No Selection ");

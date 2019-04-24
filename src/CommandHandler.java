@@ -9,19 +9,18 @@ public class CommandHandler {
     private Process p;
     String[] commands;
     String[] envp;
-    File f;
+    File file;
+    String directory;
     
     public CommandHandler() {
-      
-        
         commands = new String[1];
         envp = new String[1];
         envp[0] = "";
-        commands[0] = "ls";
+        commands[0] = "./rn";
     }
     public void start () {
          try {
-            p = Runtime.getRuntime().exec(commands,envp,f);
+            p = Runtime.getRuntime().exec(commands,envp,file);
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(p.getInputStream()));
             String s;
@@ -38,12 +37,18 @@ public class CommandHandler {
             p.destroy();
         } catch (IOException | InterruptedException e) {System.out.println(e);}
     }
-     public void setPath(File path) {
-          f = path;
+     public void setPath(File fpath, String path) {
+        file = fpath;
+        directory = path;
     }
      public void setStarName(String starName) {
         this.starName = starName;
     }
+    public void changeFolder(String fileName) {
+        file = new File(directory + "/star/test_suite/" + fileName);
+    }
+
+
 
 
     

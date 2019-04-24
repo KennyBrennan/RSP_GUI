@@ -9,16 +9,25 @@ import java.util.logging.Logger;
 
 public class FileHandler {
 
-    File file;
-    File periodFile = new File("inlist_rsp_common");
+    File file = null;
+    File periodFile = null;
+    String directory;
     LinkedList<dataObject> historyData;
 
-    public FileHandler(String fileName) {
-        file = new File(fileName);
-    }
+    public void setPath(String path) {
 
+        directory = path;
+
+        periodFile = new File(directory + "/star/inlist_rsp_common");
+
+    }
+/*
+    public FileHandler(String fileName) {
+        file = new File(directory + "/star/test_suite/" + fileName);
+    }
+*/
     public void ChangeFile(String fileName) {
-        file = new File(fileName);
+        file = new File(directory + "/star/test_suite/" + fileName);
     }
     
     public void UpdatePeriods(String periods) {
@@ -149,8 +158,6 @@ public class FileHandler {
         }
 
     }
-    
-    
 
     public LinkedList<dataObject> ParseHistory() {
         File history;
