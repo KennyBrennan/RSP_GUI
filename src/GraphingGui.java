@@ -145,7 +145,7 @@ public class GraphingGui extends javax.swing.JFrame {
         yAxis = jTextField3.getText();
         legend = jTextField4.getText();
         
-    LinkedList data = fileHandler.ParseHistory();
+    //LinkedList data = fileHandler.ParseHistory();
         SwingUtilities.invokeLater(() -> {
             Graph g = new Graph();
             g.fileHandler = this.fileHandler;

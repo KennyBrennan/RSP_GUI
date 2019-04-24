@@ -196,11 +196,11 @@ public class FileHandler {
                 o.numRetries= in.next();
                 historyData.add(o);
             }
-            System.out.println("");
-            System.out.println("Printing Data: ");
-            for(dataObject o : historyData){
-                o.printData();
-            }
+           // System.out.println("");
+           // System.out.println("Printing Data: ");
+            //for(dataObject o : historyData){
+            //    o.printData();
+            //}
 
         } catch (FileNotFoundException ex) {
             Logger.getLogger(FileHandler.class.getName()).log(Level.SEVERE, null, ex);
