@@ -19,8 +19,8 @@ import org.jfree.data.xy.XYSeriesCollection;
 public class Graph extends JFrame {
     private LinkedList<Double> x = new LinkedList();
     private LinkedList<Double> y = new LinkedList();
-    public FileHandler fileHandler;
     public LinkedList<dataObject> historyData = new LinkedList();
+    public FileHandler fileHandler;
     public String title ;
     public String xAxis;
     public String yAxis ; 

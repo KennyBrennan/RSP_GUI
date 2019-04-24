@@ -1,5 +1,3 @@
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 
 public class dataObject{
         public String modelNumber, starAge, starAgeDay, rspPhase, rspGreekM, 
@@ -11,94 +9,93 @@ public class dataObject{
 
         
         public void ConvertData(){
-           NumberFormat formatter = new DecimalFormat("###.####");  
            Double temp;
-           temp = Double.valueOf(this.starAge);
-           this.starAge = formatter.format(temp);
+           temp = Double.parseDouble(this.starAge);
+           this.starAge = String.valueOf(temp);
            
-           temp = Double.valueOf(this.starAgeDay);
-           this.starAgeDay = formatter.format(temp);
+           temp = Double.parseDouble(this.starAgeDay);
+           this.starAgeDay = String.valueOf(temp);
            
-           temp = Double.valueOf(this.rspPhase);
-           this.rspPhase = formatter.format(temp);
+           temp = Double.parseDouble(this.rspPhase);
+           this.rspPhase = String.valueOf(temp);
            
-           temp = Double.valueOf(this.rspGreekM);
-           this.rspGreekM = formatter.format(temp);
+           temp = Double.parseDouble(this.rspGreekM);
+           this.rspGreekM = String.valueOf(temp);
            
-           temp = Double.valueOf(this.rspGreekMAA);
-           this.rspGreekMAA = formatter.format(temp);
+           temp = Double.parseDouble(this.rspGreekMAA);
+           this.rspGreekMAA = String.valueOf(temp);
            
-           temp = Double.valueOf(this.rspDeltaR);
-           this.rspDeltaR = formatter.format(temp);
+           temp = Double.parseDouble(this.rspDeltaR);
+           this.rspDeltaR = String.valueOf(temp);
            
-           temp = Double.valueOf(this.rspDeltaMag);
-           this.rspDeltaMag = formatter.format(temp);
+           temp = Double.parseDouble(this.rspDeltaMag);
+           this.rspDeltaMag = String.valueOf(temp);
            
-           temp = Double.valueOf(this.rspPeriodDays);
-           this.rspPeriodDays = formatter.format(temp);
+           temp = Double.parseDouble(this.rspPeriodDays);
+           this.rspPeriodDays = String.valueOf(temp);
            
-           temp = Double.valueOf(this.rspNumPeriods);
-           this.rspNumPeriods = formatter.format(temp);
+           temp = Double.parseDouble(this.rspNumPeriods);
+           this.rspNumPeriods = String.valueOf(temp);
            
-           temp = Double.valueOf(this.logDtSec);
-           this.logDtSec = formatter.format(temp);
+           temp = Double.parseDouble(this.logDtSec);
+           this.logDtSec = String.valueOf(temp);
            
-           temp = Double.valueOf(this.radius);
-           this.radius = formatter.format(temp);
+           temp = Double.parseDouble(this.radius);
+           this.radius = String.valueOf(temp);
            
-           temp = Double.valueOf(this.logR);
-           this.logR = formatter.format(temp);
+           temp = Double.parseDouble(this.logR);
+           this.logR = String.valueOf(temp);
            
-           temp = Double.valueOf(this.vSurfKmS);
-           this.vSurfKmS = formatter.format(temp);
+           temp = Double.parseDouble(this.vSurfKmS);
+           this.vSurfKmS = String.valueOf(temp);
            
-           temp = Double.valueOf(this.vSurfDivEsc);
-           this.vSurfDivEsc = formatter.format(temp);
+           temp = Double.parseDouble(this.vSurfDivEsc);
+           this.vSurfDivEsc = String.valueOf(temp);
            
-           temp = Double.valueOf(this.vDivSurf);
-           this.vDivSurf = formatter.format(temp);
+           temp = Double.parseDouble(this.vDivSurf);
+           this.vDivSurf = String.valueOf(temp);
            
-           temp = Double.valueOf(this.vDivMax);
-           this.vDivMax = formatter.format(temp);
+           temp = Double.parseDouble(this.vDivMax);
+           this.vDivMax = String.valueOf(temp);
            
-           temp = Double.valueOf(this.maxAbsVDiv);
-           this.maxAbsVDiv = formatter.format(temp);
+           temp = Double.parseDouble(this.maxAbsVDiv);
+           this.maxAbsVDiv = String.valueOf(temp);
            
-           temp = Double.valueOf(this.dtDiv);
-           this.dtDiv = formatter.format(temp);
+           temp = Double.parseDouble(this.dtDiv);
+           this.dtDiv = String.valueOf(temp);
            
-           temp = Double.valueOf(this.luminosity);
-           this.luminosity = formatter.format(temp);
+           temp = Double.parseDouble(this.luminosity);
+           this.luminosity = String.valueOf(temp);
            
-           temp = Double.valueOf(this.logL);
-           this.logL = formatter.format(temp);
+           temp = Double.parseDouble(this.logL);
+           this.logL = String.valueOf(temp);
            
-           temp = Double.valueOf(this.effectiveT);
-           this.effectiveT = formatter.format(temp);
+           temp = Double.parseDouble(this.effectiveT);
+           this.effectiveT = String.valueOf(temp);
            
-           temp = Double.valueOf(this.logG);
-           this.logG = formatter.format(temp);
+           temp = Double.parseDouble(this.logG);
+           this.logG = String.valueOf(temp);
            
-           temp = Double.valueOf(this.logTeff);
-           this.logTeff = formatter.format(temp);
+           temp = Double.parseDouble(this.logTeff);
+           this.logTeff = String.valueOf(temp);
            
-           temp = Double.valueOf(this.photosphereL);
-           this.photosphereL = formatter.format(temp);
+           temp = Double.parseDouble(this.photosphereL);
+           this.photosphereL = String.valueOf(temp);
            
-           temp = Double.valueOf(this.photosphereR);
-           this.photosphereR = formatter.format(temp);
+           temp = Double.parseDouble(this.photosphereR);
+           this.photosphereR = String.valueOf(temp);
            
-           temp = Double.valueOf(this.photosphereT);
-           this.photosphereT = formatter.format(temp);
+           temp = Double.parseDouble(this.photosphereT);
+           this.photosphereT = String.valueOf(temp);
            
-           temp = Double.valueOf(this.photosphereR);
-           this.photosphereR = formatter.format(temp);
+           temp = Double.parseDouble(this.photosphereR);
+           this.photosphereR = String.valueOf(temp);
            
-           temp = Double.valueOf(this.photosphereKms);
-           this.photosphereKms = formatter.format(temp);
+           temp = Double.parseDouble(this.photosphereKms);
+           this.photosphereKms = String.valueOf(temp);
            
-           temp = Double.valueOf(this.photosphereDivCs);
-           this.photosphereDivCs = formatter.format(temp);    
+           temp = Double.parseDouble(this.photosphereDivCs);
+           this.photosphereDivCs = String.valueOf(temp);   
         }
         
         public void printData(){
