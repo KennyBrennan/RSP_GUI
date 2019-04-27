@@ -24,6 +24,8 @@ public class GraphingGui extends javax.swing.JFrame {
      */
     public GraphingGui() {
         initComponents();
+        jTextField4.setText(jComboBox2.getItemAt(jComboBox2.getSelectedIndex()) + "/" + jComboBox1.getItemAt(jComboBox1.getSelectedIndex()));
+
     }
 
     /**
@@ -136,7 +138,11 @@ public class GraphingGui extends javax.swing.JFrame {
         getContentPane().add(jLabel5, gridBagConstraints);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "model number", "star age", "star age day", "rsp phase", "rsp greek m", "rsp greek m avg abs", "rsp delta r", "rsp delta mag", "rsp period days", "rsp num periods", "log dt sec", "radius", "log r", "log l", "log g", "log teff", "vsurf kms", "vsurf div escape v", "vdiv surf", "vdiv max", "max abs div", "dt div", "luminosity", "effective t", "photosphere l", "photosphere r", "photosphere t", "photosphere kms", "photosphere div cs" }));
-        jComboBox1.setPreferredSize(new java.awt.Dimension(173, 28));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 5;
@@ -148,7 +154,6 @@ public class GraphingGui extends javax.swing.JFrame {
         getContentPane().add(jComboBox1, gridBagConstraints);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "model number", "star age", "star age day", "rsp phase", "rsp greek m", "rsp greek m avg abs", "rsp delta r", "rsp delta mag", "rsp period days", "rsp num periods", "log dt sec", "radius", "log r", "log l", "log g", "log teff", "vsurf kms", "vsurf div escape v", "vdiv surf", "vdiv max", "max abs div", "dt div", "luminosity", "effective t", "photosphere l", "photosphere r", "photosphere t", "photosphere kms", "photosphere div cs" }));
-        jComboBox2.setPreferredSize(new java.awt.Dimension(173, 28));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
@@ -193,7 +198,14 @@ public class GraphingGui extends javax.swing.JFrame {
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
+        jTextField4.setText(jComboBox2.getItemAt(jComboBox2.getSelectedIndex()) + "/" + jComboBox1.getItemAt(jComboBox1.getSelectedIndex()));
     }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+        jTextField4.setText(jComboBox2.getItemAt(jComboBox2.getSelectedIndex()) + "/" + jComboBox1.getItemAt(jComboBox1.getSelectedIndex()));
+
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments
