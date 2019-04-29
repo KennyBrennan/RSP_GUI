@@ -1,26 +1,34 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
-public class CommandHandler {
+public class CommandHandler implements Runnable {
 
     private String starName;
     private Process p;
-    String[] commands;
+    String[] runCommand;
+    String[] reRunCommand;
     String[] envp;
     File file;
     String directory;
+    mesaScreen ms = new mesaScreen();
     
     public CommandHandler() {
-        commands = new String[1];
+        runCommand = new String[1];
+        reRunCommand = new String[1];
         envp = new String[1];
         envp[0] = "";
-        commands[0] = "./rn";
+        runCommand[0] = "./rn";
+        reRunCommand[0] = "./re";
     }
-    public void start () {
-         try {
-            p = Runtime.getRuntime().exec(commands,envp,file);
+    @Override
+    public void run() {
+
+        this.start();
+    }
+    public void reRun() {
+        try {
+            ms.setVisible(true);
+            reRunCommand[0] = "./re " + lastFileModified();
+            p = Runtime.getRuntime().exec(reRunCommand,envp,file);
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(p.getInputStream()));
             String s;
@@ -35,8 +43,59 @@ public class CommandHandler {
             p.waitFor();
             System.out.println("exit: " + p.exitValue());
             p.destroy();
-        } catch (IOException | InterruptedException e) {System.out.println(e);}
+            ms.setVisible(false);
+
+        }catch (IOException | InterruptedException e) {System.out.println(e);}
     }
+    public void start () {
+        try {
+            ms.setVisible(true);
+            p = Runtime.getRuntime().exec(runCommand,envp,file);
+            BufferedReader br = new BufferedReader(
+                    new InputStreamReader(p.getInputStream()));
+            String s;
+            while ((s = br.readLine()) != null) {
+                System.out.println("line: " + s);
+            }
+            br = new BufferedReader(
+                    new InputStreamReader(p.getErrorStream()));
+            while ((s = br.readLine()) != null) {
+                System.out.println("line: " + s);
+            }
+            p.waitFor();
+            System.out.println("exit: " + p.exitValue());
+            p.destroy();
+            ms.setVisible(false);
+
+        }catch (IOException | InterruptedException e) {System.out.println(e);}
+
+        System.out.println("File Saved from most recent run : " + lastFileModified());
+    }
+    public String lastFileModified() {
+        File fl = new File(file + "/photos");
+       // System.out.println(fl);
+        File[] files = fl.listFiles(new FileFilter() {
+            public boolean accept(File file) {
+             //   System.out.println(file);
+                return file.isFile();
+            }
+        });
+        long lastMod = Long.MIN_VALUE;
+        File choice = null;
+
+        if (files != null) {
+            for (File file : files) {
+                if (file.lastModified() > lastMod) {
+                    choice = file;
+                    lastMod = file.lastModified();
+                }
+            }
+        }
+
+        return choice.getName();
+    }
+
+
      public void setPath(File fpath, String path) {
         file = fpath;
         directory = path;

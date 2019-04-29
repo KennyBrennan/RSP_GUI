@@ -15,11 +15,8 @@ public class FileHandler {
     LinkedList<dataObject> historyData;
 
     public void setPath(String path) {
-
         directory = path;
-
         periodFile = new File(directory + "/star/inlist_rsp_common");
-
     }
 /*
     public FileHandler(String fileName) {
