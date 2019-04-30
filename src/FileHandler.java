@@ -13,6 +13,7 @@ public class FileHandler {
     File periodFile = null;
     String directory;
     LinkedList<dataObject> historyData;
+    String starName;
 
     public void setPath(String path) {
         directory = path;
@@ -26,7 +27,11 @@ public class FileHandler {
     public void ChangeFile(String fileName) {
         file = new File(directory + "/star/test_suite/" + fileName);
     }
-    
+
+    public void setStarName(String starName) {
+        this.starName = starName;
+    }
+
     public void UpdatePeriods(String periods) {
     LinkedList<String> plist = new LinkedList();
     Scanner inPFile = null;
@@ -156,17 +161,22 @@ public class FileHandler {
 
     }
 
+
     public LinkedList<dataObject> ParseHistory() {
         File history;
         Scanner in;
         historyData = new LinkedList();
         try {
            // history = new File("history.data"); //todo: Update to real file path
-            history = new File(directory.toString() + "/LOGS/history.data");
-            System.out.println("\n\nhistory = " + history);
+            history = new File(directory + "/star/test_suite/" + starName + "/LOGS/history.data");
+           // System.out.println("\n\nhistory = " + history);
             in = new Scanner(history);
-            for (int i = 0; i < 81; i++) {
-                in.next();
+
+            if (in.hasNext()){
+                for (int i = 0; i < 81; i++) {
+                    System.out.println(i + " : " + in.next());
+                    //in.next();
+                }
             }
             while (in.hasNext()) {
                 dataObject o = new dataObject();

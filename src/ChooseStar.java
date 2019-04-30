@@ -87,6 +87,7 @@ public class ChooseStar extends javax.swing.JDialog {
         star = "rsp_RR_Lyrae";
         file = "inlist_rsp_RR_Lyrae";
         fileHandler.ChangeFile(star + "/" + file);
+        fileHandler.setStarName(star);
         commandHandler.changeFolder(star);
         commandHandler.setStarName(star);
         
@@ -98,6 +99,7 @@ public class ChooseStar extends javax.swing.JDialog {
         star = "rsp_Cepheid";
         file = "inlist_rsp_Cepheid";
         fileHandler.ChangeFile(star + "/" + file);
+        fileHandler.setStarName(star);
         commandHandler.changeFolder(star);
         commandHandler.setStarName(star);
         
