@@ -174,8 +174,8 @@ public class FileHandler {
 
             if (in.hasNext()){
                 for (int i = 0; i < 81; i++) {
-                    System.out.println(i + " : " + in.next());
-                    //in.next();
+                    //System.out.println(i + " : " + in.next());
+                    in.next();
                 }
             }
             while (in.hasNext()) {
