@@ -1,5 +1,10 @@
 import java.io.*;
+import java.util.Map;
 
+/**
+ *
+ * @authors Cj,Kenny,Matt
+ */
 public class CommandHandler implements Runnable {
 
     private String starName;
@@ -7,28 +12,49 @@ public class CommandHandler implements Runnable {
     String[] runCommand;
     String[] reRunCommand;
     String[] envp;
+    String[] args;
     File file;
     String directory;
     mesaScreen ms = new mesaScreen();
+    File lastFile;
     
     public CommandHandler() {
         runCommand = new String[1];
         reRunCommand = new String[1];
         envp = new String[1];
         envp[0] = "";
+        args = new String[1];
+        args[0] = "";
         runCommand[0] = "./rn";
         reRunCommand[0] = "./re";
     }
     @Override
     public void run() {
-
         this.start();
     }
     public void reRun() {
         try {
+            lastFile = lastFileModified();
             ms.setVisible(true);
-            reRunCommand[0] = "./re " + lastFileModified();
-            p = Runtime.getRuntime().exec(reRunCommand,envp,file);
+            //args[0] = lastFile.getName();
+          //  reRunCommand[0] = "./re " + lastFileModified();
+
+          //  System.out.println("file.toString() = " + file.toString());
+
+           // String[] args = new String[] {file.toString() + "/re", lastFile.getName()};
+
+           // System.out.println("...\n" + args[0] + args[1]);
+
+           // Process p = new ProcessBuilder(args).start();
+
+            System.out.println("...\n\n" + file + reRunCommand[0] + args[0] );
+            System.out.println("\nFile : " + file);
+            System.out.println("\nreRunCommand[0] : " + reRunCommand[0]);
+            System.out.println("\nargs[0] : " + args[0]);
+
+            p = Runtime.getRuntime().exec(reRunCommand[0] + " " + lastFile.getName(),envp,file);
+           // p = Runtime.getRuntime().exec("./re " + lastFile.getName());
+
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(p.getInputStream()));
             String s;
@@ -45,7 +71,23 @@ public class CommandHandler implements Runnable {
             p.destroy();
             ms.setVisible(false);
 
-        }catch (IOException | InterruptedException e) {System.out.println(e);}
+/*
+            ProcessBuilder pb =
+                    new ProcessBuilder("./re", lastFile.toString());
+            Map<String, String> env = pb.environment();
+            pb.directory(new File(file.toString()));
+            File log = new File("log");
+            pb.redirectErrorStream(true);
+            pb.redirectOutput(ProcessBuilder.Redirect.appendTo(log));
+            Process p = pb.start();
+            assert pb.redirectInput() == ProcessBuilder.Redirect.PIPE;
+            assert pb.redirectOutput().file() == log;
+            assert p.getInputStream().read() == -1;
+*/
+
+
+        }catch (IOException | InterruptedException e) {System.out.println("[Error] : " + e);}
+
     }
     public void start () {
         try {
@@ -71,7 +113,7 @@ public class CommandHandler implements Runnable {
 
         System.out.println("File Saved from most recent run : " + lastFileModified());
     }
-    public String lastFileModified() {
+    public File lastFileModified() {
         File fl = new File(file + "/photos");
        // System.out.println(fl);
         File[] files = fl.listFiles(new FileFilter() {
@@ -91,8 +133,8 @@ public class CommandHandler implements Runnable {
                 }
             }
         }
-
-        return choice.getName();
+        System.out.println("choice.getName() = " + choice.getName());
+        return choice;
     }
 
 

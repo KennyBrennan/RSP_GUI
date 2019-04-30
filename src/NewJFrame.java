@@ -5,13 +5,14 @@
  */
 import javax.swing.JFileChooser;
 import java.io.File;
+import java.io.IOException;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 /**
  *
- * @author Kenny
+ * @author Kenny, Cj
  */
 public class NewJFrame extends javax.swing.JFrame {
     public static FileHandler fileHandler = StartWindow.fileHandler;
@@ -390,32 +391,19 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        /*
-        JFrame f = new JFrame(); //creates jframe f
-        f.setUndecorated(true); //removes the surrounding border
-        ImageIcon image = new ImageIcon(getClass().getResource("mesa.png"));
-        JLabel lbl = new JLabel(image); //puts the image into a jlabel
-        f.getContentPane().add(lbl); //puts label inside the jframe
-        f.setSize(image.getIconWidth(), image.getIconHeight()); //gets h and w of image and sets jframe to the size
-        f.setVisible(true); //makes the jframe visible
-      */
-        //mesaScreen ms = new mesaScreen();
-       // ms.repaint();
-        //ms.setVisible(true);
 
-       // jLabel2.setVisible(true);
+        //jLabel2.setVisible(true);
+
         System.out.println("Running MESA");
 
         fileHandler.UpdateFile(Mass_Text.getText(), Temp_Text.getText(), Lumosity_Text.getText(), X_Text.getText(), Z_Text.getText());
         fileHandler.UpdatePeriods(Period_Text.getText());
-      //  commandHandler.run();
+
         Thread thread = new Thread(commandHandler);
         thread.start();
+
+        //commandHandler.run();
         //jLabel2.setVisible(false);
-        //ms.setVisible(false);
-        
-      //  f.setVisible(false);
-      //  f.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void Mass_TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mass_TextActionPerformed
@@ -423,6 +411,7 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_Mass_TextActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        System.out.println("ReRunning MESA");
         commandHandler.reRun();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -454,8 +443,6 @@ public class NewJFrame extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new NewJFrame().setVisible(true);
-           
-        
             }
         });
     }

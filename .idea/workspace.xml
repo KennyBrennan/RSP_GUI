@@ -2,6 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01689dd3-5087-446a-ba38-3672db3c0d2b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/CommandHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/CommandHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/FileHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/Graph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/dataObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/dataObject.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NewJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewJFrame.java" afterDir="false" />
@@ -14,18 +32,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/NewJFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="271" column="24" selection-start-line="271" selection-start-column="24" selection-end-line="271" selection-end-column="24" />
+            <state relative-caret-position="237">
+              <caret line="395" lean-forward="true" selection-start-line="395" selection-end-line="395" />
               <folding>
-                <element signature="docComment;class#NewJFrame#0" />
-                <element signature="docComment;method#NewJFrame#0;class#NewJFrame#0" />
-                <element signature="docComment;method#initComponents#0;class#NewJFrame#0" />
-                <element signature="e#824#913#0" expanded="true" />
-                <element signature="method#initComponents#0;class#NewJFrame#0" />
+                <element signature="e#555#600#0" />
+                <element signature="e#663#872#0" />
+                <element signature="e#912#1001#0" expanded="true" />
+                <element signature="e#8561#8562#0" expanded="true" />
+                <element signature="e#8622#8623#0" expanded="true" />
+                <element signature="e#10583#10584#0" expanded="true" />
+                <element signature="e#10643#10644#0" expanded="true" />
+                <element signature="e#24024#25698#0" />
               </folding>
             </state>
           </provider>
@@ -34,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FileHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+            <state relative-caret-position="217">
+              <caret line="165" column="36" selection-start-line="165" selection-start-column="36" selection-end-line="165" selection-end-column="36" />
               <folding>
                 <element signature="method#setPath#0;class#FileHandler#0" />
                 <element signature="method#UpdatePeriods#0;class#FileHandler#0" />
@@ -46,9 +67,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/StartWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="30" column="43" lean-forward="true" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dataObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state relative-caret-position="45">
               <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
             </state>
           </provider>
@@ -57,14 +87,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CommandHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+            <state relative-caret-position="367">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
               <folding>
-                <element signature="e#1296#1297#0" expanded="true" />
-                <element signature="e#1336#1337#0" expanded="true" />
-                <element signature="e#1380#1381#0" expanded="true" />
-                <element signature="e#1455#1456#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
+                <element signature="e#565#566#0" expanded="true" />
+                <element signature="e#4353#4354#0" expanded="true" />
+                <element signature="e#4393#4394#0" expanded="true" />
+                <element signature="e#4441#4442#0" expanded="true" />
+                <element signature="e#4516#4517#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Graph.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -77,9 +119,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/FileHandler.java" />
-        <option value="$PROJECT_DIR$/src/CommandHandler.java" />
         <option value="$PROJECT_DIR$/src/NewJFrame.java" />
+        <option value="$PROJECT_DIR$/src/CommandHandler.java" />
+        <option value="$PROJECT_DIR$/src/FileHandler.java" />
       </list>
     </option>
   </component>
@@ -87,15 +129,15 @@
     <option name="x" value="1" />
     <option name="y" value="23" />
     <option name="width" value="1419" />
-    <option name="height" value="817" />
+    <option name="height" value="810" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -115,7 +157,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556066309065" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556645550575" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -129,11 +171,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.StartWindow">
     <configuration name="NewJFrame" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="NewJFrame" />
+      <module name="RSP_GUI" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StartWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="StartWindow" />
       <module name="RSP_GUI" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -165,6 +216,11 @@
       <module name="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.StartWindow" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -180,78 +236,105 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="23" width="1419" height="817" extended-state="0" />
+    <frame x="1" y="23" width="1419" height="810" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24981844" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25344953" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23172414" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23259053" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="REPL" side_tool="true" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Leiningen" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="REPL" order="6" side_tool="true" />
+      <window_info anchor="right" id="Leiningen" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
     </layout>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/dataObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state relative-caret-position="45">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CommandHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/StartWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-          <folding>
-            <element signature="e#1296#1297#0" expanded="true" />
-            <element signature="e#1336#1337#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1455#1456#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="405">
+          <caret line="30" column="43" lean-forward="true" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/NewJFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="271" column="24" selection-start-line="271" selection-start-column="24" selection-end-line="271" selection-end-column="24" />
+        <state relative-caret-position="237">
+          <caret line="395" lean-forward="true" selection-start-line="395" selection-end-line="395" />
           <folding>
-            <element signature="docComment;class#NewJFrame#0" />
-            <element signature="docComment;method#NewJFrame#0;class#NewJFrame#0" />
-            <element signature="docComment;method#initComponents#0;class#NewJFrame#0" />
-            <element signature="e#824#913#0" expanded="true" />
-            <element signature="method#initComponents#0;class#NewJFrame#0" />
+            <element signature="e#555#600#0" />
+            <element signature="e#663#872#0" />
+            <element signature="e#912#1001#0" expanded="true" />
+            <element signature="e#8561#8562#0" expanded="true" />
+            <element signature="e#8622#8623#0" expanded="true" />
+            <element signature="e#10583#10584#0" expanded="true" />
+            <element signature="e#10643#10644#0" expanded="true" />
+            <element signature="e#24024#25698#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CommandHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#565#566#0" expanded="true" />
+            <element signature="e#4353#4354#0" expanded="true" />
+            <element signature="e#4393#4394#0" expanded="true" />
+            <element signature="e#4441#4442#0" expanded="true" />
+            <element signature="e#4516#4517#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FileHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        <state relative-caret-position="217">
+          <caret line="165" column="36" selection-start-line="165" selection-start-column="36" selection-end-line="165" selection-end-column="36" />
           <folding>
             <element signature="method#setPath#0;class#FileHandler#0" />
             <element signature="method#UpdatePeriods#0;class#FileHandler#0" />

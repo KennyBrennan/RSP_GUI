@@ -162,6 +162,8 @@ public class FileHandler {
         historyData = new LinkedList();
         try {
             history = new File("history.data"); //todo: Update to real file path
+           // history = new File(directory.toString() + "/LOGS/history.data");
+            System.out.println("\n\nhistory = " + history);
             in = new Scanner(history);
             for (int i = 0; i < 81; i++) {
                 in.next();
