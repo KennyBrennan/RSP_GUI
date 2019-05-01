@@ -34,8 +34,11 @@ public class CommandHandler implements Runnable {
     }
     public void reRun() {
         try {
-            lastFile = lastFileModified();
+            ms.setLocationRelativeTo(null);
             ms.setVisible(true);
+
+            lastFile = lastFileModified();
+
             //args[0] = lastFile.getName();
           //  reRunCommand[0] = "./re " + lastFileModified();
           //  System.out.println("file.toString() = " + file.toString());
@@ -87,6 +90,7 @@ public class CommandHandler implements Runnable {
     }
     public void start () {
         try {
+            ms.setLocationRelativeTo(null);
             ms.setVisible(true);
             p = Runtime.getRuntime().exec(runCommand,envp,file);
             BufferedReader br = new BufferedReader(
