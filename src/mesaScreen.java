@@ -1,4 +1,5 @@
 
+import java.net.URL;
 import javax.swing.ImageIcon;
 
 /*
@@ -30,6 +31,8 @@ public class mesaScreen extends javax.swing.JFrame {
     private void initComponents() {
 
         ImageIcon icon= new ImageIcon(getClass().getResource("mesa.png"));
+        //URL url = getClass().getResource("/mesa.gif");
+        //ImageIcon icon = new ImageIcon(url);
         jLabel1 = new javax.swing.JLabel(icon);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -86,8 +89,13 @@ public class mesaScreen extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                // mesaScreen = new mesaScreen().setUndecorated(true);
-                new mesaScreen().setVisible(true);
-
+                //new mesaScreen().setVisible(true);
+                mesaScreen mS = new mesaScreen();
+                mS.setLocationRelativeTo(null);
+                //mS.setUndecorated(true);
+            //    mS.setOpaque(true);
+                mS.setVisible(true);
+                
             }
         });
     }

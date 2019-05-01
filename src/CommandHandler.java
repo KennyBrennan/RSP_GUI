@@ -38,13 +38,9 @@ public class CommandHandler implements Runnable {
             ms.setVisible(true);
             //args[0] = lastFile.getName();
           //  reRunCommand[0] = "./re " + lastFileModified();
-
           //  System.out.println("file.toString() = " + file.toString());
-
            // String[] args = new String[] {file.toString() + "/re", lastFile.getName()};
-
            // System.out.println("...\n" + args[0] + args[1]);
-
            // Process p = new ProcessBuilder(args).start();
 
             System.out.println("...\n\n" + file + reRunCommand[0] + args[0] );
