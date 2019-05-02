@@ -35,6 +35,7 @@ public class CommandHandler implements Runnable {
     public void reRun() {
         try {
             ms.setLocationRelativeTo(null);
+            //ms.setUndecorated(true);
             ms.setVisible(true);
 
             lastFile = lastFileModified();
@@ -138,11 +139,11 @@ public class CommandHandler implements Runnable {
     }
 
 
-     public void setPath(File fpath, String path) {
+    public void setPath(File fpath, String path) {
         file = fpath;
         directory = path;
     }
-     public void setStarName(String starName) {
+    public void setStarName(String starName) {
         this.starName = starName;
     }
     public void changeFolder(String fileName) {

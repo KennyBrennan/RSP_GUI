@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01689dd3-5087-446a-ba38-3672db3c0d2b" name="Default Changelist" comment="Fix">
+      <change afterPath="$PROJECT_DIR$/src/CommandHandlerTest.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FileHandlerTest.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GraphTest.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RSP_GUI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RSP_GUI.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/CommandHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/CommandHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/FileHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$3.class" afterDir="false" />
@@ -13,7 +18,9 @@
       <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$7.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NewJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewJFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StartWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StartWindow.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,42 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/NewJFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-221">
-              <caret line="457" column="25" selection-start-line="457" selection-start-column="25" selection-end-line="457" selection-end-column="25" />
-              <folding>
-                <element signature="e#555#600#0" />
-                <element signature="e#663#872#0" />
-                <element signature="e#944#1033#0" expanded="true" />
-                <element signature="e#9338#9339#0" expanded="true" />
-                <element signature="e#9401#9402#0" expanded="true" />
-                <element signature="e#9767#9768#0" expanded="true" />
-                <element signature="e#9827#9828#0" expanded="true" />
-                <element signature="e#10229#10230#0" expanded="true" />
-                <element signature="e#10296#10297#0" expanded="true" />
-                <element signature="e#10703#10704#0" expanded="true" />
-                <element signature="e#10771#10772#0" expanded="true" />
-                <element signature="e#11210#11211#0" expanded="true" />
-                <element signature="e#11271#11272#0" expanded="true" />
-                <element signature="e#11647#11648#0" expanded="true" />
-                <element signature="e#11709#11710#0" expanded="true" />
-                <element signature="e#16105#16106#0" expanded="true" />
-                <element signature="e#16166#16167#0" expanded="true" />
-                <element signature="e#25823#25910#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ChooseStar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="566">
-              <caret line="156" column="54" lean-forward="true" selection-start-line="156" selection-start-column="54" selection-end-line="156" selection-end-column="54" />
-              <folding>
-                <element signature="e#4881#4968#0" expanded="true" />
-                <element signature="e#6492#6716#0" expanded="true" />
-                <element signature="e#6715#6716#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="26">
+              <caret line="431" lean-forward="true" selection-start-line="431" selection-end-line="431" />
             </state>
           </provider>
         </entry>
@@ -70,12 +43,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FileHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="182" column="42" lean-forward="true" selection-start-line="182" selection-start-column="42" selection-end-line="182" selection-end-column="42" />
+            <state relative-caret-position="187">
+              <caret line="57" column="14" lean-forward="true" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
               <folding>
-                <element signature="method#setPath#0;class#FileHandler#0" />
-                <element signature="method#UpdatePeriods#0;class#FileHandler#0" />
                 <element signature="method#UpdateFile#0;class#FileHandler#0" />
+                <element signature="method#ParseHistory#0;class#FileHandler#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CommandHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-221">
+              <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#714#715#0" expanded="true" />
+                <element signature="method#reRun#0;class#CommandHandler#0" />
+                <element signature="method#start#0;class#CommandHandler#0" />
+                <element signature="method#setPath#0;class#CommandHandler#0" />
+                <element signature="e#4903#4944#1" />
+                <element signature="e#4942#4943#0" expanded="true" />
+                <element signature="e#4991#5067#1" />
+                <element signature="e#5065#5066#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,43 +76,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StartWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="52" column="7" lean-forward="true" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mesaScreen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="93" column="15" lean-forward="true" selection-start-line="93" selection-start-column="15" selection-end-line="93" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dataObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CommandHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="282">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#537#538#0" expanded="true" />
-                <element signature="e#565#566#0" expanded="true" />
-                <element signature="e#4353#4354#0" expanded="true" />
-                <element signature="e#4393#4394#0" expanded="true" />
-                <element signature="e#4441#4442#0" expanded="true" />
-                <element signature="e#4516#4517#0" expanded="true" />
+                <element signature="e#946#1035#0" expanded="true" />
+                <element signature="e#1893#1894#0" expanded="true" />
+                <element signature="e#1953#1954#0" expanded="true" />
+                <element signature="e#5359#5583#0" expanded="true" />
+                <element signature="e#5582#5583#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -129,13 +92,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+            <state relative-caret-position="-528">
+              <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GraphingGui.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-799">
+              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mesaScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="94" column="42" selection-start-line="94" selection-start-column="42" selection-end-line="94" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
@@ -145,8 +133,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/ChooseStar.java" />
-        <option value="$PROJECT_DIR$/src/FileHandler.java" />
+        <option value="$PROJECT_DIR$/src/TestFileHandler.java" />
         <option value="$PROJECT_DIR$/src/CommandHandler.java" />
+        <option value="$PROJECT_DIR$/src/TestCommandHandler.java" />
+        <option value="$PROJECT_DIR$/src/StartWindow.java" />
+        <option value="$PROJECT_DIR$/src/CommandHandlerTest.groovy" />
+        <option value="$PROJECT_DIR$/src/FileHandlerTest.groovy" />
+        <option value="$PROJECT_DIR$/src/GraphTest.groovy" />
+        <option value="$PROJECT_DIR$/src/FileHandler.java" />
         <option value="$PROJECT_DIR$/src/NewJFrame.java" />
       </list>
     </option>
@@ -182,7 +176,18 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556687072312" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556818145279" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
+    <property name="create.test.in.the.same.root" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="groovy.util.GroovyTestCase" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -241,9 +246,19 @@
       <module name="" />
       <method v="2" />
     </configuration>
+    <configuration name="CommandHandlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RSP_GUI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CommandHandlerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.StartWindow" />
+        <item itemvalue="JUnit.CommandHandlerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -286,13 +301,37 @@
       <option name="project" value="LOCAL" />
       <updated>1556648692208</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix cmdhndl">
+      <created>1556687147949</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1556687147949</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="CommandHandlerTest - 2019.05.01 at 23h 17m 42s.xml">
+      <configuration name="CommandHandlerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommandHandlerTest - 2019.05.01 at 23h 19m 13s.xml">
+      <configuration name="CommandHandlerTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1419" height="811" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25344953" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28031954" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -301,15 +340,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.15716273" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3449235" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32962447" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32962447" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3286908" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3713491" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -326,7 +365,20 @@
     <MESSAGE value="./re working" />
     <MESSAGE value="Connected Graph to MESA" />
     <MESSAGE value="Fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix" />
+    <MESSAGE value="fix cmdhndl" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix cmdhndl" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FileHandler.java</url>
+          <line>45</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/dataObject.java">
@@ -343,29 +395,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FileHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="182" column="42" lean-forward="true" selection-start-line="182" selection-start-column="42" selection-end-line="182" selection-end-column="42" />
-          <folding>
-            <element signature="method#setPath#0;class#FileHandler#0" />
-            <element signature="method#UpdatePeriods#0;class#FileHandler#0" />
-            <element signature="method#UpdateFile#0;class#FileHandler#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ChooseStar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="156" column="54" lean-forward="true" selection-start-line="156" selection-start-column="54" selection-end-line="156" selection-end-column="54" />
+        <state relative-caret-position="210">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="68" />
           <folding>
             <element signature="e#4881#4968#0" expanded="true" />
             <element signature="e#6492#6716#0" expanded="true" />
@@ -374,60 +407,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StartWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/TestCommandHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="52" column="7" lean-forward="true" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#659#660#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestFileHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-528">
+          <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GraphingGui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-799">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mesaScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="93" column="15" lean-forward="true" selection-start-line="93" selection-start-column="15" selection-end-line="93" selection-end-column="47" />
+        <state relative-caret-position="359">
+          <caret line="94" column="42" selection-start-line="94" selection-start-column="42" selection-end-line="94" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StartWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="e#946#1035#0" expanded="true" />
+            <element signature="e#1893#1894#0" expanded="true" />
+            <element signature="e#1953#1954#0" expanded="true" />
+            <element signature="e#5359#5583#0" expanded="true" />
+            <element signature="e#5582#5583#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CommandHandlerTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileHandlerTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GraphTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CommandHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        <state relative-caret-position="-221">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#537#538#0" expanded="true" />
-            <element signature="e#565#566#0" expanded="true" />
-            <element signature="e#4353#4354#0" expanded="true" />
-            <element signature="e#4393#4394#0" expanded="true" />
-            <element signature="e#4441#4442#0" expanded="true" />
-            <element signature="e#4516#4517#0" expanded="true" />
+            <element signature="e#714#715#0" expanded="true" />
+            <element signature="method#reRun#0;class#CommandHandler#0" />
+            <element signature="method#start#0;class#CommandHandler#0" />
+            <element signature="method#setPath#0;class#CommandHandler#0" />
+            <element signature="e#4903#4944#1" />
+            <element signature="e#4942#4943#0" expanded="true" />
+            <element signature="e#4991#5067#1" />
+            <element signature="e#5065#5066#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="57" column="14" lean-forward="true" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
+          <folding>
+            <element signature="method#UpdateFile#0;class#FileHandler#0" />
+            <element signature="method#ParseHistory#0;class#FileHandler#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/NewJFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="457" column="25" selection-start-line="457" selection-start-column="25" selection-end-line="457" selection-end-column="25" />
-          <folding>
-            <element signature="e#555#600#0" />
-            <element signature="e#663#872#0" />
-            <element signature="e#944#1033#0" expanded="true" />
-            <element signature="e#9338#9339#0" expanded="true" />
-            <element signature="e#9401#9402#0" expanded="true" />
-            <element signature="e#9767#9768#0" expanded="true" />
-            <element signature="e#9827#9828#0" expanded="true" />
-            <element signature="e#10229#10230#0" expanded="true" />
-            <element signature="e#10296#10297#0" expanded="true" />
-            <element signature="e#10703#10704#0" expanded="true" />
-            <element signature="e#10771#10772#0" expanded="true" />
-            <element signature="e#11210#11211#0" expanded="true" />
-            <element signature="e#11271#11272#0" expanded="true" />
-            <element signature="e#11647#11648#0" expanded="true" />
-            <element signature="e#11709#11710#0" expanded="true" />
-            <element signature="e#16105#16106#0" expanded="true" />
-            <element signature="e#16166#16167#0" expanded="true" />
-            <element signature="e#25823#25910#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="26">
+          <caret line="431" lean-forward="true" selection-start-line="431" selection-end-line="431" />
         </state>
       </provider>
     </entry>

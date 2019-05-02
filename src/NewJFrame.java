@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 
 /**
  *
- * @author Kenny, Cj
+ * @authors Kenny, Cj
  */
 public class NewJFrame extends javax.swing.JFrame {
     public static FileHandler fileHandler = StartWindow.fileHandler;
@@ -310,7 +310,7 @@ public class NewJFrame extends javax.swing.JFrame {
         X_Label.setText("X");
 
         Temperature_Label.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 14)); // NOI18N
-        Temperature_Label.setText("Temperature");
+        Temperature_Label.setText("Temp");
 
         Mass_Text.setName("Mass_Text"); // NOI18N
         Mass_Text.addActionListener(new java.awt.event.ActionListener() {
@@ -452,7 +452,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void reButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reButtonActionPerformed
         System.out.println("ReRunning MESA");
+        fileHandler.UpdatePeriods(Period_Text.getText());
         commandHandler.reRun();
+
+       // Thread thread = new Thread(commandHandler);
+       // thread.start();
     }//GEN-LAST:event_reButtonActionPerformed
 
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed

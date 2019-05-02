@@ -14,16 +14,17 @@ public class FileHandler {
     String directory;
     LinkedList<dataObject> historyData;
     String starName;
+    /*
+        public FileHandler(String fileName) {
+            file = new File(directory + "/star/test_suite/" + fileName);
+        }
+    */
 
     public void setPath(String path) {
         directory = path;
         periodFile = new File(directory + "/star/inlist_rsp_common");
     }
-/*
-    public FileHandler(String fileName) {
-        file = new File(directory + "/star/test_suite/" + fileName);
-    }
-*/
+
     public void ChangeFile(String fileName) {
         file = new File(directory + "/star/test_suite/" + fileName);
     }
@@ -58,9 +59,11 @@ public class FileHandler {
     while (i < plist.size()) {
         String temp = plist.get(i);
         //System.out.println("I: "+ i + " Temp2: " +temp);
-        if (temp.contains("RSP_target_steps_per_cycle")) {
+       // if (temp.contains("RSP_target_steps_per_cycle")) {
+        if (temp.contains("RSP_max_num_periods =")){
             if (!periods.equals("")) {
-                temp = temp.replaceAll(temp, "         RSP_target_steps_per_cycle = " + periods + System.lineSeparator());
+                //temp = temp.replaceAll(temp, "         RSP_target_steps_per_cycle = " + periods + System.lineSeparator());
+                temp = temp.replaceAll(temp, "         RSP_max_num_periods = " + periods + System.lineSeparator());
                 plist.set(i, temp);
             }
         }
