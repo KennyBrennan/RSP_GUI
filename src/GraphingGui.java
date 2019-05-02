@@ -179,8 +179,8 @@ public class GraphingGui extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         title = jTextField1.getText();
-        xAxis = jComboBox1.getItemAt(jComboBox1.getSelectedIndex());
-        yAxis = jComboBox2.getItemAt(jComboBox2.getSelectedIndex());
+        xAxis = jComboBox2.getItemAt(jComboBox2.getSelectedIndex());
+        yAxis = jComboBox1.getItemAt(jComboBox1.getSelectedIndex());
         legend = jTextField4.getText();
         
     //LinkedList data = fileHandler.ParseHistory();
