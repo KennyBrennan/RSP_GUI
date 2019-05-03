@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -18,6 +19,11 @@ public class FileHandler {
     public void setPath(String path) {
         directory = path;
         periodFile = new File(directory + "/star/inlist_rsp_common");
+    }
+    public void setText(String text){
+        JTextArea textArea = NewJFrame.mesaTextArea;
+        String oldText = textArea.getText();
+        textArea.setText(oldText + "\n" + text);
     }
 /*
     public FileHandler(String fileName) {
@@ -62,6 +68,7 @@ public class FileHandler {
             if (!periods.equals("")) {
                 temp = temp.replaceAll(temp, "         RSP_target_steps_per_cycle = " + periods + System.lineSeparator());
                 plist.set(i, temp);
+                setText("Periods set to : " + periods);
             }
         }
         i++;
@@ -114,36 +121,43 @@ public class FileHandler {
                 if (!mass.equals("")) {
                     temp = temp.replaceAll(temp, "   RSP_mass = " + mass + System.lineSeparator());
                     list.set(i, temp);
+                    setText("Mass set to : " + mass);
                 }
             } else if (temp.contains("RSP_Teff")) {
                 if (!temperature.equals("")) {
                     temp = temp.replaceAll(temp, "   RSP_Teff = " + temperature + System.lineSeparator());
                     list.set(i, temp);
+                    setText("Temp set to : " + temperature);
                 }
             } else if (temp.contains("RSP_L")) {
                 if (!l.equals("")) {
                     temp = temp.replaceAll(temp, "   RSP_L = " + l + System.lineSeparator());
                     list.set(i, temp);
+                    setText("L set to : " + l);
                 }
             } else if (temp.contains("RSP_X")) {
                 if (!x.equals("")) {
                     temp = temp.replaceAll(temp, "   RSP_X = " + x + System.lineSeparator());
                     list.set(i, temp);
+                    setText("X set to : " + x);
                 }
             } else if (temp.contains("RSP_Z")) {
                 if (!z.equals("")) {
                     temp = temp.replaceAll(temp, "   RSP_Z = " + z + System.lineSeparator());
                     list.set(i, temp);
+                    setText("Z set to : " + z);
                 }
             } else if (temp.contains("x_integer_ctrl(1) = ")) {
                 if (!checkText.equals("")) {
                     temp = temp.replaceAll(temp, "         x_integer_ctrl(1) = " + checkText + " ! which period to check " + System.lineSeparator());
                     list.set(i, temp);
+                    setText("Period to check set to : " + checkText);
                 }
             } else if (temp.contains("x_ctrl(1) = ")) {
                 if (!exptText.equals("")) {
                     temp = temp.replaceAll(temp, "         x_integer_ctrl(1) = " + exptText + " ! expected period (in days) " + System.lineSeparator());
                     list.set(i, temp);
+                    setText("Expected Period set to : " + exptText);
                 }
             }  else {
             }

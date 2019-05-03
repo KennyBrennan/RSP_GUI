@@ -29,7 +29,7 @@ public class CommandHandler implements Runnable {
         args[0] = "";
         runCommand[0] = "./rn";
         reRunCommand[0] = "./re";
-        textArea = NewJFrame.mesaTextArea;
+       // textArea = NewJFrame.mesaTextArea;
     }
     @Override
     public void run() {
@@ -93,7 +93,7 @@ public class CommandHandler implements Runnable {
     }
     public void start () {
         try {
-            ms.setVisible(true);
+          //  ms.setVisible(true);
             p = Runtime.getRuntime().exec(runCommand,envp,file);
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(p.getInputStream()));
@@ -111,7 +111,7 @@ public class CommandHandler implements Runnable {
             p.waitFor();
             System.out.println("exit: " + p.exitValue());
             p.destroy();
-            ms.setVisible(false);
+          //  ms.setVisible(false);
 
         }catch (IOException | InterruptedException e) {System.out.println(e);}
 
@@ -140,16 +140,16 @@ public class CommandHandler implements Runnable {
         System.out.println("choice.getName() = " + choice.getName());
         return choice;
     }
-
     public void setText(String text){
         textArea = NewJFrame.mesaTextArea;
-        textArea.setText(text);
+        String oldText = textArea.getText();
+        textArea.setText(oldText + "\n" + text);
     }
-     public void setPath(File fpath, String path) {
+    public void setPath(File fpath, String path) {
         file = fpath;
         directory = path;
     }
-     public void setStarName(String starName) {
+    public void setStarName(String starName) {
         this.starName = starName;
     }
     public void changeFolder(String fileName) {

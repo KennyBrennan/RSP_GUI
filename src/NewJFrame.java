@@ -507,7 +507,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private void reButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reButtonActionPerformed
         System.out.println("ReRunning MESA");
         commandHandler.reRun();
-        commandHandler.setText("hi");
+      //  commandHandler.setText("hi");
     }//GEN-LAST:event_reButtonActionPerformed
 
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
