@@ -14,17 +14,16 @@ public class FileHandler {
     String directory;
     LinkedList<dataObject> historyData;
     String starName;
-    /*
-        public FileHandler(String fileName) {
-            file = new File(directory + "/star/test_suite/" + fileName);
-        }
-    */
 
     public void setPath(String path) {
         directory = path;
         periodFile = new File(directory + "/star/inlist_rsp_common");
     }
-
+/*
+    public FileHandler(String fileName) {
+        file = new File(directory + "/star/test_suite/" + fileName);
+    }
+*/
     public void ChangeFile(String fileName) {
         file = new File(directory + "/star/test_suite/" + fileName);
     }
@@ -59,11 +58,9 @@ public class FileHandler {
     while (i < plist.size()) {
         String temp = plist.get(i);
         //System.out.println("I: "+ i + " Temp2: " +temp);
-       // if (temp.contains("RSP_target_steps_per_cycle")) {
-        if (temp.contains("RSP_max_num_periods =")){
+        if (temp.contains("RSP_target_steps_per_cycle")) {
             if (!periods.equals("")) {
-                //temp = temp.replaceAll(temp, "         RSP_target_steps_per_cycle = " + periods + System.lineSeparator());
-                temp = temp.replaceAll(temp, "         RSP_max_num_periods = " + periods + System.lineSeparator());
+                temp = temp.replaceAll(temp, "         RSP_target_steps_per_cycle = " + periods + System.lineSeparator());
                 plist.set(i, temp);
             }
         }
@@ -90,7 +87,7 @@ public class FileHandler {
     }
 }
 
-    public void UpdateFile(String mass, String temperature, String l, String x, String z) {
+    public void UpdateFile(String exptText,String checkText, String mass, String temperature, String l, String x, String z) {
         LinkedList<String> list = new LinkedList();
         Scanner inFile = null;
         FileWriter outFile = null;
@@ -138,7 +135,17 @@ public class FileHandler {
                     temp = temp.replaceAll(temp, "   RSP_Z = " + z + System.lineSeparator());
                     list.set(i, temp);
                 }
-            } else {
+            } else if (temp.contains("x_integer_ctrl(1) = ")) {
+                if (!checkText.equals("")) {
+                    temp = temp.replaceAll(temp, "         x_integer_ctrl(1) = " + checkText + " ! which period to check " + System.lineSeparator());
+                    list.set(i, temp);
+                }
+            } else if (temp.contains("x_ctrl(1) = ")) {
+                if (!exptText.equals("")) {
+                    temp = temp.replaceAll(temp, "         x_integer_ctrl(1) = " + exptText + " ! expected period (in days) " + System.lineSeparator());
+                    list.set(i, temp);
+                }
+            }  else {
             }
             i++;
         }

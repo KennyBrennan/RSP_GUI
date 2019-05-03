@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.Map;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -17,6 +18,7 @@ public class CommandHandler implements Runnable {
     String directory;
     mesaScreen ms = new mesaScreen();
     File lastFile;
+    JTextArea textArea;
     
     public CommandHandler() {
         runCommand = new String[1];
@@ -27,6 +29,7 @@ public class CommandHandler implements Runnable {
         args[0] = "";
         runCommand[0] = "./rn";
         reRunCommand[0] = "./re";
+        textArea = NewJFrame.mesaTextArea;
     }
     @Override
     public void run() {
@@ -34,12 +37,9 @@ public class CommandHandler implements Runnable {
     }
     public void reRun() {
         try {
-            ms.setLocationRelativeTo(null);
-            //ms.setUndecorated(true);
-            ms.setVisible(true);
-
             lastFile = lastFileModified();
-
+            ms.setVisible(true);
+            
             //args[0] = lastFile.getName();
           //  reRunCommand[0] = "./re " + lastFileModified();
           //  System.out.println("file.toString() = " + file.toString());
@@ -60,11 +60,13 @@ public class CommandHandler implements Runnable {
             String s;
             while ((s = br.readLine()) != null) {
                 System.out.println("line: " + s);
+                setText(s);
             }
             br = new BufferedReader(
                     new InputStreamReader(p.getErrorStream()));
             while ((s = br.readLine()) != null) {
                 System.out.println("line: " + s);
+                setText(s);
             }
             p.waitFor();
             System.out.println("exit: " + p.exitValue());
@@ -91,7 +93,6 @@ public class CommandHandler implements Runnable {
     }
     public void start () {
         try {
-            ms.setLocationRelativeTo(null);
             ms.setVisible(true);
             p = Runtime.getRuntime().exec(runCommand,envp,file);
             BufferedReader br = new BufferedReader(
@@ -99,11 +100,13 @@ public class CommandHandler implements Runnable {
             String s;
             while ((s = br.readLine()) != null) {
                 System.out.println("line: " + s);
+                setText(s);
             }
             br = new BufferedReader(
                     new InputStreamReader(p.getErrorStream()));
             while ((s = br.readLine()) != null) {
                 System.out.println("line: " + s);
+                setText(s);
             }
             p.waitFor();
             System.out.println("exit: " + p.exitValue());
@@ -138,12 +141,14 @@ public class CommandHandler implements Runnable {
         return choice;
     }
 
-
-    public void setPath(File fpath, String path) {
+    public void setText(String text){
+        NewJFrame.mesaTextArea.setText("hi");
+    }
+     public void setPath(File fpath, String path) {
         file = fpath;
         directory = path;
     }
-    public void setStarName(String starName) {
+     public void setStarName(String starName) {
         this.starName = starName;
     }
     public void changeFolder(String fileName) {

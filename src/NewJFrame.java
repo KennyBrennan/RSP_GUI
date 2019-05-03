@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 
 /**
  *
- * @authors Kenny, Cj
+ * @author Kenny, Cj
  */
 public class NewJFrame extends javax.swing.JFrame {
     public static FileHandler fileHandler = StartWindow.fileHandler;
@@ -22,6 +22,7 @@ public class NewJFrame extends javax.swing.JFrame {
      */
     public NewJFrame() {
         initComponents();
+        
     }
 
     /**
@@ -72,6 +73,13 @@ public class NewJFrame extends javax.swing.JFrame {
         Mass_Text = new javax.swing.JTextField();
         Period_Label = new javax.swing.JLabel();
         X_Text = new javax.swing.JTextField();
+        Check_Text = new javax.swing.JTextField();
+        Period_Label1 = new javax.swing.JLabel();
+        Expt_Text = new javax.swing.JTextField();
+        Period_Label2 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        mesaTextArea = new javax.swing.JTextArea();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -260,7 +268,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(19, 19, 19)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(reButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(runButton, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE))
@@ -310,7 +318,7 @@ public class NewJFrame extends javax.swing.JFrame {
         X_Label.setText("X");
 
         Temperature_Label.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 14)); // NOI18N
-        Temperature_Label.setText("Temp");
+        Temperature_Label.setText("Temperature");
 
         Mass_Text.setName("Mass_Text"); // NOI18N
         Mass_Text.addActionListener(new java.awt.event.ActionListener() {
@@ -322,33 +330,49 @@ public class NewJFrame extends javax.swing.JFrame {
         Period_Label.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 14)); // NOI18N
         Period_Label.setText("Periods");
 
+        Check_Text.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Check_TextActionPerformed(evt);
+            }
+        });
+
+        Period_Label1.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 14)); // NOI18N
+        Period_Label1.setText("Period to Check");
+
+        Period_Label2.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 14)); // NOI18N
+        Period_Label2.setText("Expected Period");
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(113, 113, 113)
                         .addComponent(Mass_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Temperature_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(X_Label, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Lumosity_Label, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Period_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(Mass_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(42, 42, 42)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(X_Text, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(Z_Text, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(Period_Text, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(Lumosity_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(Temp_Text, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(Temperature_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(X_Label, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Lumosity_Label, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Period_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(Mass_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Period_Label1)
+                            .addComponent(Period_Label2))
+                        .addGap(35, 35, 35)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(Check_Text, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
+                            .addComponent(X_Text, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Z_Text, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Period_Text, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Lumosity_Text, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Temp_Text, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Expt_Text))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -378,31 +402,68 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Period_Text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Period_Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Check_Text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Period_Label1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Expt_Text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Period_Label2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+        );
+
+        jPanel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        mesaTextArea.setColumns(20);
+        mesaTextArea.setRows(5);
+        jScrollPane2.setViewportView(mesaTextArea);
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2)
+                .addContainerGap())
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(161, 161, 161)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 25, Short.MAX_VALUE))
+                .addGap(161, 161, 161))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         getContentPane().add(jPanel1, new java.awt.GridBagConstraints());
@@ -436,9 +497,9 @@ public class NewJFrame extends javax.swing.JFrame {
 
         System.out.println("Running MESA");
 
-        fileHandler.UpdateFile(Mass_Text.getText(), Temp_Text.getText(), Lumosity_Text.getText(), X_Text.getText(), Z_Text.getText());
+        fileHandler.UpdateFile(Expt_Text.getText(),Check_Text.getText(), Mass_Text.getText(), Temp_Text.getText(), Lumosity_Text.getText(), X_Text.getText(), Z_Text.getText());
         fileHandler.UpdatePeriods(Period_Text.getText());
-
+        
         Thread thread = new Thread(commandHandler);
         thread.start();
 
@@ -452,16 +513,16 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void reButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reButtonActionPerformed
         System.out.println("ReRunning MESA");
-        fileHandler.UpdatePeriods(Period_Text.getText());
         commandHandler.reRun();
-
-       // Thread thread = new Thread(commandHandler);
-       // thread.start();
     }//GEN-LAST:event_reButtonActionPerformed
 
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
         System.exit(0);
     }//GEN-LAST:event_exitButtonActionPerformed
+
+    private void Check_TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Check_TextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Check_TextActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -494,16 +555,21 @@ public class NewJFrame extends javax.swing.JFrame {
                 NewJFrame NJF = new NewJFrame();
                 NJF.setLocationRelativeTo(null);
                 NJF.setVisible(true);
+                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Check_Text;
+    private javax.swing.JTextField Expt_Text;
     private javax.swing.JLabel Lumosity_Label;
     private javax.swing.JTextField Lumosity_Text;
     private javax.swing.JLabel Mass_Label;
     private javax.swing.JTextField Mass_Text;
     private javax.swing.JLabel Period_Label;
+    private javax.swing.JLabel Period_Label1;
+    private javax.swing.JLabel Period_Label2;
     private javax.swing.JTextField Period_Text;
     private javax.swing.JTextField Temp_Text;
     private javax.swing.JLabel Temperature_Label;
@@ -532,9 +598,12 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JPopupMenu jPopupMenu2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    public static javax.swing.JTextArea mesaTextArea;
     private javax.swing.JButton reButton;
     private javax.swing.JButton runButton;
     // End of variables declaration//GEN-END:variables
