@@ -222,12 +222,18 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jPanel4" alignment="1" max="32767" attributes="0"/>
-                      <Component id="jPanel5" alignment="1" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace type="unrelated" max="32767" attributes="0"/>
                   <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -408,35 +414,32 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
-                              <Component id="Mass_Text" min="-2" pref="221" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="Temperature_Label" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                  <Component id="X_Label" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                                  <Component id="Lumosity_Label" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                                  <Component id="Period_Label" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="jLabel8" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="Temperature_Label" min="-2" pref="71" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                          <Component id="X_Label" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
-                                          <Component id="Lumosity_Label" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
-                                          <Component id="Period_Label" min="-2" pref="61" max="-2" attributes="0"/>
-                                          <Component id="jLabel8" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="Mass_Label" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="Period_Label1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Period_Label2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="Check_Text" alignment="0" pref="221" max="32767" attributes="0"/>
-                                  <Component id="X_Text" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="Z_Text" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="Period_Text" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="Lumosity_Text" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="Temp_Text" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="Expt_Text" max="32767" attributes="0"/>
-                              </Group>
+                          <Component id="Period_Label2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Component id="Mass_Label" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
+                              <Component id="Period_Label1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Mass_Text" min="-2" pref="221" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="Check_Text" alignment="0" pref="221" max="32767" attributes="0"/>
+                              <Component id="X_Text" alignment="0" max="32767" attributes="0"/>
+                              <Component id="Z_Text" alignment="0" max="32767" attributes="0"/>
+                              <Component id="Period_Text" alignment="0" max="32767" attributes="0"/>
+                              <Component id="Lumosity_Text" alignment="0" max="32767" attributes="0"/>
+                              <Component id="Temp_Text" alignment="0" max="32767" attributes="0"/>
+                              <Component id="Expt_Text" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
