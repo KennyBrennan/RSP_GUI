@@ -21,7 +21,7 @@ public class FileHandler {
         periodFile = new File(directory + "/star/inlist_rsp_common");
     }
     public void setText(String text){
-        JTextArea textArea = NewJFrame.mesaTextArea;
+        JTextArea textArea = MainGui.mesaTextArea;
         String oldText = textArea.getText();
         textArea.setText(oldText + "\n" + text);
     }

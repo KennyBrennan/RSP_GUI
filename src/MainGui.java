@@ -14,13 +14,13 @@ import javax.swing.JLabel;
  *
  * @author Kenny, Cj
  */
-public class NewJFrame extends javax.swing.JFrame {
+public class MainGui extends javax.swing.JFrame {
     public static FileHandler fileHandler = StartWindow.fileHandler;
     public static CommandHandler commandHandler = StartWindow.commandHandler;
     /**
      * Creates new form NewJFrame
      */
-    public NewJFrame() {
+    public MainGui() {
         initComponents();
         
     }
@@ -33,7 +33,6 @@ public class NewJFrame extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         jFrame1 = new javax.swing.JFrame();
@@ -269,7 +268,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(changeDirButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(changeStarButton, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE))
+                    .addComponent(changeStarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(graphButton, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
@@ -496,7 +495,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         fileHandler.UpdateFile(Expt_Text.getText(),Check_Text.getText(), Mass_Text.getText(), Temp_Text.getText(), Lumosity_Text.getText(), X_Text.getText(), Z_Text.getText());
         fileHandler.UpdatePeriods(Period_Text.getText());
-        
+        commandHandler.command = 1;
         Thread thread = new Thread(commandHandler);
         thread.start();
 
@@ -506,7 +505,9 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void reButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reButtonActionPerformed
         System.out.println("ReRunning MESA");
-        commandHandler.reRun();
+        commandHandler.command = 2;
+        Thread thread = new Thread(commandHandler);
+        thread.start();
       //  commandHandler.setText("hi");
     }//GEN-LAST:event_reButtonActionPerformed
 
@@ -536,21 +537,22 @@ public class NewJFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainGui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                //   new NewJFrame().setVisible(true);
-                NewJFrame NJF = new NewJFrame();
+                //   new MainGui().setVisible(true);
+                MainGui NJF = new MainGui();
                 NJF.setLocationRelativeTo(null);
                 NJF.setVisible(true);
                 
