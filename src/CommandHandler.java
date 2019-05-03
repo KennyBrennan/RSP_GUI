@@ -40,9 +40,9 @@ public class CommandHandler implements Runnable {
             lastFile = lastFileModified();
             ms.setVisible(true);
             
-            //args[0] = lastFile.getName();
-          //  reRunCommand[0] = "./re " + lastFileModified();
-          //  System.out.println("file.toString() = " + file.toString());
+           // args[0] = lastFile.getName();
+           // reRunCommand[0] = "./re " + lastFileModified();
+           // System.out.println("file.toString() = " + file.toString());
            // String[] args = new String[] {file.toString() + "/re", lastFile.getName()};
            // System.out.println("...\n" + args[0] + args[1]);
            // Process p = new ProcessBuilder(args).start();
@@ -142,7 +142,8 @@ public class CommandHandler implements Runnable {
     }
 
     public void setText(String text){
-        NewJFrame.mesaTextArea.setText("hi");
+        textArea = NewJFrame.mesaTextArea;
+        textArea.setText(text);
     }
      public void setPath(File fpath, String path) {
         file = fpath;
