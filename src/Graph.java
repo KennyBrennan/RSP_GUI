@@ -1,9 +1,7 @@
-import java.awt.BasicStroke;
-import java.awt.Color;
-import java.awt.Font;
+import java.awt.*;
 import java.util.LinkedList;
-import javax.swing.BorderFactory;
-import javax.swing.JFrame;
+import javax.swing.*;
+
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -21,12 +19,13 @@ public class Graph extends JFrame {
     private LinkedList<Double> y = new LinkedList();
     public LinkedList<dataObject> historyData = new LinkedList();
     public FileHandler fileHandler;
-    public String title;
+    public String title ;
     public String xAxis;
-    public String yAxis; 
+    public String yAxis ; 
     public String legend;
-    public int modelNumStart= 0, modelNumEnd = 0;
-    
+    public String modelMin;
+    public String modelMax;
+
     public void initUI() {
         historyData = fileHandler.ParseHistory();
         XYDataset dataset = createDataset(legend);
@@ -34,159 +33,165 @@ public class Graph extends JFrame {
         ChartPanel chartPanel = new ChartPanel(chart);
         chartPanel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
         chartPanel.setBackground(Color.white);
+
+        chartPanel.setMouseWheelEnabled(true);
+        chartPanel.setMouseZoomable(true);
+        chartPanel.setDisplayToolTips(true);
+
         add(chartPanel);
         pack();
         setTitle(title);
         setLocationRelativeTo(null);
-        // setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       // setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-    
+
+
     public void SetXData(){
         switch(xAxis.toLowerCase()){
             case "model number":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                    x.add(Double.valueOf(historyData.get(i).modelNumber));
+                for(dataObject o: historyData){
+                    x.add(Double.valueOf(o.modelNumber));
                 } 
                 break;
             case "star age":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).starAge));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.starAge));
                 } 
                 break;
             case "star age day":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).starAgeDay));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.starAgeDay));
                 } 
                 break;
             case "rsp phase":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).rspPhase));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.rspPhase));
                 } 
                 break;
             case "rsp greek m":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).rspGreekM));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.rspGreekM));
                 } 
                 break;
             case "rsp greek m avg abs":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).rspGreekMAA));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.rspGreekMAA));
                 } 
                 break;
             case "rsp delta r":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).rspDeltaR));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.rspDeltaR));
                 } 
                 break;
             case "rsp delta mag":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).rspDeltaMag));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.rspDeltaMag));
                 } 
                 break;
             case "rsp period days":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).rspPeriodDays));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.rspPeriodDays));
                 } 
                 break;
             case "rsp num periods":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).rspNumPeriods));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.rspNumPeriods));
                 } 
                 break;
             case "log dt sec":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).logDtSec));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.logDtSec));
                 } 
                 break;
             case "radius":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).radius));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.radius));
                 } 
                 break;
             case "log r":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).logR));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.logR));
                 } 
                 break;
             case "vsurf kms":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).vSurfKmS));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.vSurfKmS));
                 } 
                 break;
             case "vsurf div escape v":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).vSurfDivEsc));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.vSurfDivEsc));
                 } 
                 break;
             case "vdiv surf":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).vDivSurf));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.vDivSurf));
                 } 
                 break;
                 
             case "vdiv max":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).vDivMax));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.vDivMax));
                 } 
                 break;
             case "max abs div":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).maxAbsVDiv));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.maxAbsVDiv));
                 } 
                 break;
             case "dt div":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).dtDiv));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.dtDiv));
                 } 
                 break;
             case "luminosity":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).luminosity));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.luminosity));
                 } 
                 break;
             case "log l":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).logL));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.logL));
                 } 
                 break;
             case "effective t":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).effectiveT));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.effectiveT));
                 } 
                 break;                
             case "log g":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).logG));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.logG));
                 } 
                 break;                               
             case "log teff":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).logTeff));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.logTeff));
                 } 
                 break;                               
             case "photosphere l":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).photosphereL));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.photosphereL));
                 } 
                 break;                                               
             case "photosphere r":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).photosphereR));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.photosphereR));
                 } 
                 break;                               
             case "photosphere t":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).photosphereT));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.photosphereT));
                 } 
                 break;                               
             case "photosphere kms":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).photosphereKms));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.photosphereKms));
                 } 
                 break;                               
             case "photosphere div cs":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     x.add(Double.valueOf(historyData.get(i).photosphereDivCs));
+                for(dataObject o: historyData){
+                     x.add(Double.valueOf(o.photosphereDivCs));
                 } 
                 break;
         }
@@ -194,149 +199,149 @@ public class Graph extends JFrame {
     public void SetYData(){
         switch(yAxis.toLowerCase()){
             case "model number":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                    y.add(Double.valueOf(historyData.get(i).modelNumber));
+                for(dataObject o: historyData){
+                    y.add(Double.valueOf(o.modelNumber));
                 } 
                 break;
             case "star age":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).starAge));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.starAge));
                 } 
                 break;
             case "star age day":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).starAgeDay));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.starAgeDay));
                 } 
                 break;
             case "rsp phase":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).rspPhase));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.rspPhase));
                 } 
                 break;
             case "rsp greek m":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).rspGreekM));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.rspGreekM));
                 } 
                 break;
             case "rsp greek m avg abs":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).rspGreekMAA));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.rspGreekMAA));
                 } 
                 break;
             case "rsp delta r":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).rspDeltaR));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.rspDeltaR));
                 } 
                 break;
             case "rsp delta mag":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).rspDeltaMag));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.rspDeltaMag));
                 } 
                 break;
             case "rsp period days":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).rspPeriodDays));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.rspPeriodDays));
                 } 
                 break;
             case "rsp num periods":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).rspNumPeriods));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.rspNumPeriods));
                 } 
                 break;
             case "log dt sec":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).logDtSec));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.logDtSec));
                 } 
                 break;
             case "radius":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).radius));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.radius));
                 } 
                 break;
             case "log r":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).logR));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.logR));
                 } 
                 break;
             case "vsurf kms":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).vSurfKmS));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.vSurfKmS));
                 } 
                 break;
             case "vsurf div escape v":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).vSurfDivEsc));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.vSurfDivEsc));
                 } 
                 break;
             case "vdiv surf":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).vDivSurf));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.vDivSurf));
                 } 
                 break;
                 
             case "vdiv max":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).vDivMax));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.vDivMax));
                 } 
                 break;
             case "max abs div":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).maxAbsVDiv));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.maxAbsVDiv));
                 } 
                 break;
             case "dt div":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).dtDiv));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.dtDiv));
                 } 
                 break;
             case "luminosity":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).luminosity));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.luminosity));
                 } 
                 break;
             case "log l":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).logL));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.logL));
                 } 
                 break;
             case "effective t":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).effectiveT));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.effectiveT));
                 } 
                 break;                
             case "log g":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).logG));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.logG));
                 } 
                 break;                               
             case "log teff":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).logTeff));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.logTeff));
                 } 
                 break;                               
             case "photosphere l":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).photosphereL));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.photosphereL));
                 } 
                 break;                                               
             case "photosphere r":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).photosphereR));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.photosphereR));
                 } 
                 break;                               
             case "photosphere t":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).photosphereT));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.photosphereT));
                 } 
                 break;                               
             case "photosphere kms":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).photosphereKms));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.photosphereKms));
                 } 
                 break;                               
             case "photosphere div cs":
-                for(int i = modelNumStart; i <= modelNumEnd; i++){
-                     y.add(Double.valueOf(historyData.get(i).photosphereDivCs));
+                for(dataObject o: historyData){
+                     y.add(Double.valueOf(o.photosphereDivCs));
                 } 
                 break;
         }
@@ -369,6 +374,7 @@ public class Graph extends JFrame {
         }
         XYSeriesCollection dataset = new XYSeriesCollection();
         dataset.addSeries(series);
+
         return dataset;
     }
 
@@ -407,6 +413,9 @@ public class Graph extends JFrame {
                 )
         );
 
+
         return chart;
+
     }
+
 }

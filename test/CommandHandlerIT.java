@@ -17,8 +17,30 @@ import static org.junit.Assert.*;
  * @author CJ
  */
 public class CommandHandlerIT {
-    
+
+    public int command;
+    private BufferedReader br;
+    private String starName;
+    private Process p;
+    String[] runCommand;
+    String[] reRunCommand;
+    String[] envp;
+    String directory;
+    String s;
+    File file;
+    File lastFile;
+    File choice = null;
+    JTextArea textArea;
+    mesaScreen ms = new mesaScreen();
+
     public CommandHandlerIT() {
+        runCommand = new String[1];
+        reRunCommand = new String[1];
+        envp = new String[1];
+        envp[0] = "";
+        runCommand[0] = "./rn";
+        reRunCommand[0] = "./re";
+
     }
     
     @BeforeClass
@@ -42,11 +64,16 @@ public class CommandHandlerIT {
      */
     @Test
     public void testRun() {
+
         System.out.println("run");
         CommandHandler instance = new CommandHandler();
+        instance.command = 1;
+        instance.starName = "rsp_RR_Lyrae";
+        instance.directory = "/Users/christiandevito/Desktop/programs/CSC380/mesa-r11554";
+
         instance.run();
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -139,5 +166,5 @@ public class CommandHandlerIT {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-    
+
 }

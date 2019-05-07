@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01689dd3-5087-446a-ba38-3672db3c0d2b" name="Default Changelist" comment="Fix">
+    <list default="true" id="01689dd3-5087-446a-ba38-3672db3c0d2b" name="Default Changelist" comment="C">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/CommandHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/CommandHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/FileHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSP_GUI/GraphingGui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSP_GUI/NewJFrame.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NewJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewJFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/CommandHandlerIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/CommandHandlerIT.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,64 +33,98 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/NewJFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="522" column="46" lean-forward="true" selection-start-line="522" selection-start-column="46" selection-end-line="522" selection-end-column="46" />
-              <folding>
-                <element signature="e#918#948#0" expanded="true" />
-                <element signature="e#953#1042#0" expanded="true" />
-                <element signature="e#9363#9364#0" expanded="true" />
-                <element signature="e#9426#9427#0" expanded="true" />
-                <element signature="e#9792#9793#0" expanded="true" />
-                <element signature="e#9852#9853#0" expanded="true" />
-                <element signature="e#10254#10255#0" expanded="true" />
-                <element signature="e#10321#10322#0" expanded="true" />
-                <element signature="e#10728#10729#0" expanded="true" />
-                <element signature="e#10796#10797#0" expanded="true" />
-                <element signature="e#11235#11236#0" expanded="true" />
-                <element signature="e#11296#11297#0" expanded="true" />
-                <element signature="e#11672#11673#0" expanded="true" />
-                <element signature="e#11734#11735#0" expanded="true" />
-                <element signature="e#16131#16132#0" expanded="true" />
-                <element signature="e#16192#16193#0" expanded="true" />
-                <element signature="e#16485#16486#0" expanded="true" />
-                <element signature="e#16547#16548#0" expanded="true" />
-                <element signature="e#29670#29757#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FileHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="159" column="66" lean-forward="true" selection-start-line="159" selection-start-column="66" selection-end-line="159" selection-end-column="66" />
+            <state relative-caret-position="750">
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
               <folding>
-                <element signature="e#705#706#0" expanded="true" />
-                <element signature="e#780#781#0" expanded="true" />
-                <element signature="e#828#829#0" expanded="true" />
-                <element signature="e#868#869#0" expanded="true" />
                 <element signature="method#ParseHistory#0;class#FileHandler#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MainGui.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="39">
+              <caret line="493" lean-forward="true" selection-start-line="493" selection-end-line="493" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Graph.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+              <folding>
+                <element signature="method#SetXData#0;class#Graph#0" />
+                <element signature="method#SetYData#0;class#Graph#0" />
+                <element signature="method#createDataset#0;class#Graph#0" />
+                <element signature="method#createChart#0;class#Graph#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GraphingGui.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="195" selection-start-line="195" selection-end-line="195" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ChooseStar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="86" column="8" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CommandHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="909">
-              <caret line="143" column="42" lean-forward="true" selection-start-line="143" selection-start-column="42" selection-end-line="143" selection-end-column="42" />
+            <state relative-caret-position="525">
+              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#lastFileModified#0;class#CommandHandler#0" />
-                <element signature="method#setPath#0;class#CommandHandler#0" />
-                <element signature="e#4903#4944#1" />
-                <element signature="e#5220#5221#0" expanded="true" />
-                <element signature="e#4991#5067#1" />
-                <element signature="e#5343#5344#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/CommandHandlerIT.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="67" column="34" lean-forward="true" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/FileHandlerIT.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#3489#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/GraphIT.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-12">
+              <caret line="83" column="23" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#4026#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,42 +133,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StartWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="915">
+              <caret line="90" column="63" selection-start-line="90" selection-start-column="63" selection-end-line="90" selection-end-column="63" />
               <folding>
                 <element signature="e#946#1035#0" expanded="true" />
                 <element signature="e#1893#1894#0" expanded="true" />
                 <element signature="e#1953#1954#0" expanded="true" />
-                <element signature="e#5359#5583#0" expanded="true" />
-                <element signature="e#5582#5583#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Graph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-528">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GraphingGui.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mesaScreen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="94" column="42" selection-start-line="94" selection-start-column="42" selection-end-line="94" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -155,9 +167,12 @@
         <option value="$PROJECT_DIR$/src/FileHandlerTest.groovy" />
         <option value="$PROJECT_DIR$/src/GraphTest.groovy" />
         <option value="$PROJECT_DIR$/src/CommandHandlerTest.groovy" />
+        <option value="$PROJECT_DIR$/src/FileHandler.java" />
         <option value="$PROJECT_DIR$/src/NewJFrame.java" />
         <option value="$PROJECT_DIR$/src/CommandHandler.java" />
-        <option value="$PROJECT_DIR$/src/FileHandler.java" />
+        <option value="$PROJECT_DIR$/src/MainGui.java" />
+        <option value="$PROJECT_DIR$/test/CommandHandlerIT.java" />
+        <option value="$PROJECT_DIR$/src/Graph.java" />
       </list>
     </option>
   </component>
@@ -185,6 +200,11 @@
               <item name="RSP_GUI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="RSP_GUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RSP_GUI" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -192,10 +212,13 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556851036477" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557268108011" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -218,6 +241,15 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.StartWindow">
+    <configuration name="GraphingGui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="GraphingGui" />
+      <module name="RSP_GUI" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NewJFrame" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -240,6 +272,15 @@
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="NewJFrame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mesaScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="mesaScreen" />
+      <module name="RSP_GUI" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -274,7 +315,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.StartWindow" />
+        <item itemvalue="Application.GraphingGui" />
         <item itemvalue="JUnit.CommandHandlerTest" />
+        <item itemvalue="Application.mesaScreen" />
       </list>
     </recent_temporary>
   </component>
@@ -331,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556818185897</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Set textArea Text">
+      <created>1556851500202</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1556851500202</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -339,6 +389,15 @@
       <configuration name="CommandHandlerTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CommandHandlerTest - 2019.05.01 at 23h 19m 13s.xml">
+      <configuration name="CommandHandlerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommandHandlerTest - 2019.05.05 at 20h 39m 10s.xml">
+      <configuration name="CommandHandlerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommandHandlerTest - 2019.05.05 at 20h 39m 21s.xml">
+      <configuration name="CommandHandlerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommandHandlerTest - 2019.05.06 at 17h 43m 18s.xml">
       <configuration name="CommandHandlerTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -355,7 +414,7 @@
     <frame x="0" y="23" width="1419" height="810" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28031954" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28395063" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -364,13 +423,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.15598886" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4996369" visible="true" weight="0.1545961" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32962447" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32962447" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5003631" side_tool="true" weight="0.15598886" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.37047353" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -390,7 +449,8 @@
     <MESSAGE value="Connected Graph to MESA" />
     <MESSAGE value="fix cmdhndl" />
     <MESSAGE value="Fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix" />
+    <MESSAGE value="Set textArea Text" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set textArea Text" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -419,64 +479,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ChooseStar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="68" />
-          <folding>
-            <element signature="e#4881#4968#0" expanded="true" />
-            <element signature="e#6492#6716#0" expanded="true" />
-            <element signature="e#6715#6716#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestCommandHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#624#625#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestFileHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-528">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestCommandHandler.java" />
+    <entry file="file://$PROJECT_DIR$/src/TestFileHandler.java" />
     <entry file="file://$PROJECT_DIR$/src/mesaScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
           <caret line="94" column="42" selection-start-line="94" selection-start-column="42" selection-end-line="94" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StartWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-          <folding>
-            <element signature="e#946#1035#0" expanded="true" />
-            <element signature="e#1893#1894#0" expanded="true" />
-            <element signature="e#1953#1954#0" expanded="true" />
-            <element signature="e#5359#5583#0" expanded="true" />
-            <element signature="e#5582#5583#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -494,84 +502,203 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraphingGui.java">
+    <entry file="file://$PROJECT_DIR$/src/CommandHandlerTest.groovy" />
+    <entry file="file://$PROJECT_DIR$/inlist_rsp_RR_Lyrae">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        <state relative-caret-position="12">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CommandHandlerTest.groovy">
+    <entry file="file://$PROJECT_DIR$/src/NewJFrame.java" />
+    <entry file="jar://$USER_HOME$/Downloads/jdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/ClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+        <state relative-caret-position="136">
+          <caret line="520" selection-start-line="520" selection-end-line="520" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NewJFrame.java">
+    <entry file="jar://$USER_HOME$/Downloads/jdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="522" column="46" lean-forward="true" selection-start-line="522" selection-start-column="46" selection-end-line="522" selection-end-column="46" />
+        <state relative-caret-position="207">
+          <caret line="161" column="12" lean-forward="true" selection-start-line="161" selection-start-column="12" selection-end-line="161" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inlist_rsp_Cepheid">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
           <folding>
-            <element signature="e#918#948#0" expanded="true" />
-            <element signature="e#953#1042#0" expanded="true" />
-            <element signature="e#9363#9364#0" expanded="true" />
-            <element signature="e#9426#9427#0" expanded="true" />
-            <element signature="e#9792#9793#0" expanded="true" />
-            <element signature="e#9852#9853#0" expanded="true" />
-            <element signature="e#10254#10255#0" expanded="true" />
-            <element signature="e#10321#10322#0" expanded="true" />
-            <element signature="e#10728#10729#0" expanded="true" />
-            <element signature="e#10796#10797#0" expanded="true" />
-            <element signature="e#11235#11236#0" expanded="true" />
-            <element signature="e#11296#11297#0" expanded="true" />
-            <element signature="e#11672#11673#0" expanded="true" />
-            <element signature="e#11734#11735#0" expanded="true" />
-            <element signature="e#16131#16132#0" expanded="true" />
-            <element signature="e#16192#16193#0" expanded="true" />
-            <element signature="e#16485#16486#0" expanded="true" />
-            <element signature="e#16547#16548#0" expanded="true" />
-            <element signature="e#29670#29757#0" expanded="true" />
+            <element signature="method#ParseHistory#0;class#FileHandler#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FileHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/ChooseStar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="159" column="66" lean-forward="true" selection-start-line="159" selection-start-column="66" selection-end-line="159" selection-end-column="66" />
+        <state relative-caret-position="525">
+          <caret line="86" column="8" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/FileHandlerIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#705#706#0" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-            <element signature="e#828#829#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="method#ParseHistory#0;class#FileHandler#0" />
+            <element signature="e#0#3489#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StartWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="90" column="63" selection-start-line="90" selection-start-column="63" selection-end-line="90" selection-end-column="63" />
+          <folding>
+            <element signature="e#946#1035#0" expanded="true" />
+            <element signature="e#1893#1894#0" expanded="true" />
+            <element signature="e#1953#1954#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CommandHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="909">
-          <caret line="143" column="42" lean-forward="true" selection-start-line="143" selection-start-column="42" selection-end-line="143" selection-end-column="42" />
+        <state relative-caret-position="525">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#lastFileModified#0;class#CommandHandler#0" />
-            <element signature="method#setPath#0;class#CommandHandler#0" />
-            <element signature="e#4903#4944#1" />
-            <element signature="e#5220#5221#0" expanded="true" />
-            <element signature="e#4991#5067#1" />
-            <element signature="e#5343#5344#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GraphingGui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="195" selection-start-line="195" selection-end-line="195" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainGui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="493" lean-forward="true" selection-start-line="493" selection-end-line="493" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="method#SetXData#0;class#Graph#0" />
+            <element signature="method#SetYData#0;class#Graph#0" />
+            <element signature="method#createDataset#0;class#Graph#0" />
+            <element signature="method#createChart#0;class#Graph#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/GraphIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="83" column="23" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#4026#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/CommandHandlerIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="67" column="34" lean-forward="true" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.12.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>RSP_GUI</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>RSP_GUI</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
