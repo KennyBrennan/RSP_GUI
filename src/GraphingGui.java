@@ -209,8 +209,8 @@ public class GraphingGui extends javax.swing.JFrame {
         xAxis = jComboBox2.getItemAt(jComboBox2.getSelectedIndex());
         yAxis = jComboBox1.getItemAt(jComboBox1.getSelectedIndex());
         legend = jTextField4.getText();
-        modelNumStart = Integer.valueOf(jTextField5.getText());
-        modelNumEnd = Integer.valueOf(jTextField6.getText());
+        modelNumStart = Integer.parseInt(jTextField5.getText());
+        modelNumEnd = Integer.parseInt(jTextField6.getText());
     //LinkedList data = fileHandler.ParseHistory();
         SwingUtilities.invokeLater(() -> {
             Graph g = new Graph();
