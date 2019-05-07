@@ -25,10 +25,9 @@ public class Graph extends JFrame {
     public String xAxis;
     public String yAxis; 
     public String legend;
-    public int modelNumStart= 0, modelNumEnd = 0;
+    public int modelNumStart = 0, modelNumEnd = 0;
     
     public void initUI() {
-        historyData = fileHandler.ParseHistory();
         XYDataset dataset = createDataset(legend);
         JFreeChart chart = createChart(dataset);
         ChartPanel chartPanel = new ChartPanel(chart);
