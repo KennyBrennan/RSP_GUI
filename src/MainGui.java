@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 import javax.swing.JFileChooser;
 import java.io.File;
 import java.io.IOException;
@@ -15,14 +10,16 @@ import javax.swing.JLabel;
  * @author Kenny, Cj
  */
 public class MainGui extends javax.swing.JFrame {
+
     public static FileHandler fileHandler = StartWindow.fileHandler;
     public static CommandHandler commandHandler = StartWindow.commandHandler;
+
     /**
      * Creates new form NewJFrame
      */
     public MainGui() {
         initComponents();
-        
+
     }
 
     /**
@@ -302,7 +299,7 @@ public class MainGui extends javax.swing.JFrame {
         jLabel8.setText("Z");
 
         Lumosity_Label.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 14)); // NOI18N
-        Lumosity_Label.setText("Lumosity");
+        Lumosity_Label.setText("Luminosity");
 
         Mass_Label.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 14)); // NOI18N
         Mass_Label.setText("Mass");
@@ -342,17 +339,16 @@ public class MainGui extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(Temperature_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(X_Label, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Lumosity_Label, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Period_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(Period_Label2)
-                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(Mass_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Period_Label1, javax.swing.GroupLayout.Alignment.LEADING)))
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Period_Label2)
+                        .addComponent(Period_Label1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Mass_Label, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Temperature_Label, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Lumosity_Label, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Mass_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -481,7 +477,7 @@ public class MainGui extends javax.swing.JFrame {
     }//GEN-LAST:event_changeDirButtonActionPerformed
 
     private void graphButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_graphButtonActionPerformed
-     
+
         GraphingGui g = new GraphingGui();
         g.fileHandler = this.fileHandler;
         g.setVisible(true);
@@ -490,15 +486,12 @@ public class MainGui extends javax.swing.JFrame {
     private void runButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_runButtonActionPerformed
 
         //jLabel2.setVisible(true);
-
         System.out.println("Running MESA");
-
-        fileHandler.UpdateFile(Expt_Text.getText(),Check_Text.getText(), Mass_Text.getText(), Temp_Text.getText(), Lumosity_Text.getText(), X_Text.getText(), Z_Text.getText());
+        fileHandler.UpdateFile(Expt_Text.getText(), Check_Text.getText(), Mass_Text.getText(), Temp_Text.getText(), Lumosity_Text.getText(), X_Text.getText(), Z_Text.getText());
         fileHandler.UpdatePeriods(Period_Text.getText());
         commandHandler.command = 1;
         Thread thread = new Thread(commandHandler);
         thread.start();
-
         //commandHandler.run();
         //jLabel2.setVisible(false);
     }//GEN-LAST:event_runButtonActionPerformed
@@ -508,7 +501,7 @@ public class MainGui extends javax.swing.JFrame {
         commandHandler.command = 2;
         Thread thread = new Thread(commandHandler);
         thread.start();
-      //  commandHandler.setText("hi");
+        //  commandHandler.setText("hi");
     }//GEN-LAST:event_reButtonActionPerformed
 
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
@@ -555,7 +548,7 @@ public class MainGui extends javax.swing.JFrame {
                 MainGui NJF = new MainGui();
                 NJF.setLocationRelativeTo(null);
                 NJF.setVisible(true);
-                
+
             }
         });
     }
