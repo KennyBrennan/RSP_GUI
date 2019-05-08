@@ -15,6 +15,7 @@ public class GraphingGui extends javax.swing.JFrame {
     public String xAxis;
     public String yAxis;
     public String legend;
+    public Graph g;
     public FileHandler fileHandler;
     public int modelNumStart, modelNumEnd;
     
@@ -23,8 +24,10 @@ public class GraphingGui extends javax.swing.JFrame {
      */
     public GraphingGui() {
         initComponents();
+        g.historyData = this.fileHandler.ParseHistory();
         jTextField4.setText(jComboBox2.getItemAt(jComboBox2.getSelectedIndex()) + "/" + jComboBox1.getItemAt(jComboBox1.getSelectedIndex()));
-
+        jTextField5.setText("0");
+        jTextField6.setText(String.valueOf(g.historyData.size()));
     }
 
     /**
@@ -214,7 +217,6 @@ public class GraphingGui extends javax.swing.JFrame {
     //LinkedList data = fileHandler.ParseHistory();
         SwingUtilities.invokeLater(() -> {
             Graph g = new Graph();
-            g.historyData = this.fileHandler.ParseHistory();
             g.SetTitle(title);
             g.SetXAxis(xAxis);
             g.SetYAxis(yAxis);
