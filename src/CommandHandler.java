@@ -17,7 +17,8 @@ public class CommandHandler implements Runnable {
     String[] envp;
     String directory;
     String s;
-    File file;
+    File mesaFile;
+    File starPath;
     File lastFile;
     File choice = null;
     JTextArea textArea;
@@ -43,14 +44,15 @@ public class CommandHandler implements Runnable {
                 this.reRun();
                 break;
         }
-        this.start();
+      //this.start();
     }
 
     public void reRun() {
         try {
+            System.out.println("\nreRun\n");
             // ms.setVisible(true);
             lastFile = lastFileModified();
-            p = Runtime.getRuntime().exec(reRunCommand[0] + " " + lastFile.getName(), envp, file);
+            p = Runtime.getRuntime().exec(reRunCommand[0] + " " + lastFile.getName(), envp, starPath);
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(p.getInputStream()));
 
@@ -75,8 +77,9 @@ public class CommandHandler implements Runnable {
 
     public void start() {
         try {
+            System.out.println("\nrun\n");
             //ms.setVisible(true);
-            p = Runtime.getRuntime().exec(runCommand, envp, file);
+            p = Runtime.getRuntime().exec(runCommand, envp, starPath);
             br = new BufferedReader(
                     new InputStreamReader(p.getInputStream()));
             String s;
@@ -101,7 +104,7 @@ public class CommandHandler implements Runnable {
     }
 
     public File lastFileModified() {
-        File fl = new File(file + "/photos");
+        File fl = new File(starPath+ "/photos");
         // System.out.println(fl);
         File[] files = fl.listFiles(new FileFilter() {
             public boolean accept(File file) {
@@ -129,16 +132,24 @@ public class CommandHandler implements Runnable {
         textArea.setText(oldText + "\n" + text);
     }
 
-    public void setPath(File fpath, String path) {
-        file = fpath;
-        directory = path;
+    public void setPath(File mesaFile, String mesaPath) {
+        this.mesaFile = mesaFile;
+        directory = mesaPath;
+        System.out.println("file = " + mesaFile);
+        System.out.println("directory = " + directory);
     }
 
     public void setStarName(String starName) {
         this.starName = starName;
+        System.out.println("starName =" + starName);
     }
 
-    public void changeFolder(String fileName) {
-        file = new File(directory + "/star/test_suite/" + fileName);
+    public void changeFolder(String starName) {
+        //file = new File(directory + "/star/test_suite/" + fileName);
+        starPath = new File(directory + "/star/test_suite/" + starName);
+        System.out.println("directory = " + directory);
+        System.out.println("starName = " + starName);
+        System.out.println("starPath = " + starPath);
     }
+
 }

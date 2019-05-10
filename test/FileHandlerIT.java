@@ -43,11 +43,11 @@ public class FileHandlerIT {
     @Test
     public void testSetPath() {
         System.out.println("setPath");
-        String path = "";
+        String path = "/Users/christiandevito/Desktop/programs/CSC380/mesa-r11554";
         FileHandler instance = new FileHandler();
         instance.setPath(path);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -56,11 +56,11 @@ public class FileHandlerIT {
     @Test
     public void testChangeFile() {
         System.out.println("ChangeFile");
-        String fileName = "";
+        String fileName = "rsp_RR_Lyrae/inlist_rsp_RR_Lyrae";
         FileHandler instance = new FileHandler();
         instance.ChangeFile(fileName);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -69,7 +69,7 @@ public class FileHandlerIT {
     @Test
     public void testSetStarName() {
         System.out.println("setStarName");
-        String starName = "rsp_Cepheid";
+        String starName = "rsp_RR_Lyrae";
         FileHandler instance = new FileHandler();
         instance.setStarName(starName);
             if (instance.starName.equals(starName)){
@@ -79,15 +79,23 @@ public class FileHandlerIT {
 
     /**
      * Test of UpdatePeriods method, of class FileHandler.
+     *
+     *    RSP_mass = 0.65d0
+     *    RSP_Teff = 6500d0
+     *    RSP_L = 60d0
+     *    RSP_X = 0.75d0
+     *    RSP_Z = 0.0004d0
+     *
+     *
      */
     @Test
     public void testUpdatePeriods() {
         System.out.println("UpdatePeriods");
-        String periods = "";
+        String periods = "1000";
         FileHandler instance = new FileHandler();
         instance.UpdatePeriods(periods);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -96,17 +104,17 @@ public class FileHandlerIT {
     @Test
     public void testUpdateFile() {
         System.out.println("UpdateFile");
-        String exptText = "";
-        String checkText = "";
-        String mass = "";
-        String temperature = "";
-        String l = "";
-        String x = "";
-        String z = "";
+        String exptText = "0.71262d0";
+        String checkText = "10";
+        String mass = "0.65d0";
+        String temperature = "6500d0";
+        String l = "60d0";
+        String x = "0.75d0";
+        String z = "0.004d0";
         FileHandler instance = new FileHandler();
         instance.UpdateFile(exptText, checkText, mass, temperature, l, x, z);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -120,7 +128,7 @@ public class FileHandlerIT {
         LinkedList<dataObject> result = instance.ParseHistory();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
-    
+
 }

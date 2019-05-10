@@ -13,8 +13,10 @@ public class FileHandler {
     File file = null;
     File periodFile = null;
     String directory;
-    LinkedList<dataObject> historyData;
     String starName;
+
+    LinkedList<dataObject> historyData;
+
 
     public void setPath(String path) {
         directory = path;
@@ -64,9 +66,9 @@ public class FileHandler {
     while (i < plist.size()) {
         String temp = plist.get(i);
         //System.out.println("I: "+ i + " Temp2: " +temp);
-        if (temp.contains("RSP_target_steps_per_cycle")) {
+        if (temp.contains("RSP_max_num_periods = ")) {
             if (!periods.equals("")) {
-                temp = temp.replaceAll(temp, "         RSP_target_steps_per_cycle = " + periods + System.lineSeparator());
+                temp = temp.replaceAll(temp, "         RSP_max_num_periods = " + periods + System.lineSeparator());
                 plist.set(i, temp);
                 setText("Periods set to : " + periods);
             }

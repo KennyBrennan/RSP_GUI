@@ -15,7 +15,7 @@ public class ChooseStar extends javax.swing.JDialog {
     public static FileHandler fileHandler = StartWindow.fileHandler;
     public static CommandHandler commandHandler = StartWindow.commandHandler;
     public String star;
-    public String file;
+    public String starFile;
     /**
      * Creates new form ChooseStar
      */
@@ -85,8 +85,8 @@ public class ChooseStar extends javax.swing.JDialog {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         star = "rsp_RR_Lyrae";
-        file = "inlist_rsp_RR_Lyrae";
-        fileHandler.ChangeFile(star + "/" + file);
+        starFile = "rsp_RR_Lyrae/inlist_rsp_RR_Lyrae";
+        fileHandler.ChangeFile(starFile);
         fileHandler.setStarName(star);
         commandHandler.changeFolder(star);
         commandHandler.setStarName(star);
@@ -97,8 +97,8 @@ public class ChooseStar extends javax.swing.JDialog {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         star = "rsp_Cepheid";
-        file = "inlist_rsp_Cepheid";
-        fileHandler.ChangeFile(star + "/" + file);
+        starFile = "rsp_Cepheid/inlist_rsp_Cepheid";
+        fileHandler.ChangeFile(starFile);
         fileHandler.setStarName(star);
         commandHandler.changeFolder(star);
         commandHandler.setStarName(star);

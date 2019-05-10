@@ -1,4 +1,5 @@
 import javax.swing.SwingUtilities;
+import java.util.LinkedList;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -16,18 +17,19 @@ public class GraphingGui extends javax.swing.JFrame {
     public String yAxis;
     public String legend;
     public Graph g;
-    public FileHandler fileHandler;
+    public FileHandler fileHandler = StartWindow.fileHandler;
     public int modelNumStart, modelNumEnd;
+    public LinkedList<dataObject> historyData;
     
     /**
      * Creates new form GraphingGui
      */
     public GraphingGui() {
         initComponents();
-        g.historyData = this.fileHandler.ParseHistory();
+        historyData = fileHandler.ParseHistory();
         jTextField4.setText(jComboBox2.getItemAt(jComboBox2.getSelectedIndex()) + "/" + jComboBox1.getItemAt(jComboBox1.getSelectedIndex()));
         jTextField5.setText("0");
-        jTextField6.setText(String.valueOf(g.historyData.size()));
+        jTextField6.setText(String.valueOf(historyData.size() * 10));
     }
 
     /**
@@ -212,11 +214,12 @@ public class GraphingGui extends javax.swing.JFrame {
         xAxis = jComboBox2.getItemAt(jComboBox2.getSelectedIndex());
         yAxis = jComboBox1.getItemAt(jComboBox1.getSelectedIndex());
         legend = jTextField4.getText();
-        modelNumStart = Integer.parseInt(jTextField5.getText());
-        modelNumEnd = Integer.parseInt(jTextField6.getText());
+        modelNumStart = Integer.parseInt(jTextField5.getText()) / 10;
+        modelNumEnd = Integer.parseInt(jTextField6.getText()) / 10;
     //LinkedList data = fileHandler.ParseHistory();
         SwingUtilities.invokeLater(() -> {
             Graph g = new Graph();
+            g.historyData = historyData;
             g.SetTitle(title);
             g.SetXAxis(xAxis);
             g.SetYAxis(yAxis);

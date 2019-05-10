@@ -27,7 +27,8 @@ public class CommandHandlerIT {
     String[] envp;
     String directory;
     String s;
-    File file;
+    File mesaFile;
+    File starPath;
     File lastFile;
     File choice = null;
     JTextArea textArea;
@@ -134,11 +135,11 @@ public class CommandHandlerIT {
     public void testSetPath() {
         System.out.println("setPath");
         File fpath = null;
-        String path = "";
+        String path = "/Users/christiandevito/Desktop/programs/CSC380/mesa-r11554";
         CommandHandler instance = new CommandHandler();
         instance.setPath(fpath, path);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -147,11 +148,11 @@ public class CommandHandlerIT {
     @Test
     public void testSetStarName() {
         System.out.println("setStarName");
-        String starName = "";
+        String starName = "rsp_RR_Lyrae";
         CommandHandler instance = new CommandHandler();
         instance.setStarName(starName);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -160,11 +161,11 @@ public class CommandHandlerIT {
     @Test
     public void testChangeFolder() {
         System.out.println("changeFolder");
-        String fileName = "";
+        String star = "rsp_RR_Lyrae";
         CommandHandler instance = new CommandHandler();
-        instance.changeFolder(fileName);
+        instance.changeFolder(star);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
 }
