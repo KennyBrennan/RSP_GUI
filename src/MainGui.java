@@ -14,7 +14,6 @@ public class MainGui extends javax.swing.JFrame {
     public static FileHandler fileHandler = StartWindow.fileHandler;
     public static CommandHandler commandHandler = StartWindow.commandHandler;
    // public static Thread[] thread = new Thread[10];
-    //public static Thread thread = new Thread();
     public static int count = 0;
 
     /**
